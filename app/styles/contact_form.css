@@ -1,0 +1,100 @@
+.contact {
+  gap: 1rem;
+
+  background-color: var(--c-white);
+}
+
+.contact__banner {
+  display: none;
+}
+
+.contact__content {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact__banner,
+.contact__content {
+  width: 100%;
+}
+
+.contact__form {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact__form__box {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact__form__field {
+  flex-direction: column;
+  gap: 0.25rem;
+
+  padding: 0.5rem 0.75rem 0 0.75rem;
+
+  background-color: var(--c-white--ls);
+
+  max-width: calc(100vw - 2.5rem);
+}
+
+.contact__form__label {
+  color: var(--c-gray);
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.contact__form__label:hover, 
+.contact__form__label:focus, 
+.contact__form__label:active {
+  color: var(--c-main--ds);
+}
+
+.contact__form__input {
+  border: 0.25rem solid transparent;
+  transition: all 0.2s ease-in-out;
+  font-weight: 300;
+}
+
+.contact__form__input:focus {
+  border-bottom-color: var(--c-main);
+}
+
+.contact__form__button {
+  color: var(--c-white--ls);
+  background-color: var(--c-black);
+
+  border: none;
+
+  padding: 1rem;
+
+  align-self: flex-start;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.contact__form__button:hover {
+  background-color: var(--c-main);
+  color: var(--c-black);
+
+  box-shadow: 0.25rem 0.25rem 0.125rem var(--c-gray);
+}
+
+@media screen and (min-width: 728px) {
+  .contact__banner {
+    display: inline-block;
+    max-width: 15rem;
+    background-color: var(--c-white--l);
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contact__banner {
+    max-width: 30rem;
+  }
+}

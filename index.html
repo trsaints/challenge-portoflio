@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./app/styles/reset.css" />
+    <link rel="stylesheet" href="./app/styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="./app/assets/fontawesome/css/fontawesome.css"
+    />
+    <link rel="stylesheet" href="./app/assets/fontawesome/css/brands.css" />
+    <link rel="stylesheet" href="./app/assets/fontawesome/css/solid.css" />
+    <meta
+      name="description"
+      content="Thiago Rodrigues santos, desenvolvedor Web"
+    />
+    <title>trsaints</title>
+  </head>
+  <body>
+    <header class="header wrapper">
+      <div class="header__logo">
+        <img src="./app/assets/images/trsaints-logos_white.png" alt="" />
+      </div>
+
+      <div class="header__menu">
+        <button type="button" data-element="menu" class="header__menu__btn">
+          <i class="fa-solid fa-bars"></i> Menu
+        </button>
+        <nav class="header__nav" data-element="navbar">
+          <div class="header__nav__links wrapper" data-element="nav-links">
+            <a href="#about" class="header__nav__link">sobre mim</a>
+            <a href="#skills" class="header__nav__link">skills</a>
+            <a href="#hobbies" class="header__nav__link">hobbies</a>
+            <a href="#graduations" class="header__nav__link">formação</a>
+            <a href="#projects" class="header__nav__link">projetos</a>
+            <a href="#contact" class="header__nav__link">contato</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main" data-element="main" id="main">
+      <div class="main__hero wrapper">
+        <div class="main__hero__box wrapper">
+          <h1 class="main__hero__title">
+            olá, meu nome é <span lang="pt-br">Thiago</span> e construo páginas
+            web
+          </h1>
+
+          <p class="main__hero__description">
+            Estudo desenvolvimento Web, atualmente focado em
+            <span lang="en">Front-End</span> para construir aplicações
+            sofisticadas, elegantes e acessíveis
+          </p>
+
+          <nav class="main__hero__links wrapper">
+            <a href="https://github.com/trsaints" class="main__hero__link">
+              GitHub
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/trsaints2003/"
+              class="main__hero__link"
+              >LinkedIn <i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/channel/UC2nx2A4nAL7piYG58Fi7xsg"
+              class="main__hero__link"
+              >YouTube
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </nav>
+        </div>
+
+        <div class="main__hero__banner">
+          <img src="./app/assets/images/trsaints-logos_black.png" alt="" />
+        </div>
+      </div>
+
+      <section class="main__about" id="about">
+        <h2 class="main__about__title">sobre mim</h2>
+
+        <div class="main__about__content wrapper">
+          <p class="main__about__description">
+            Nascido no Estado de <span lang="pt-br">Goiás</span>, tenho 19 anos
+            e viso me especializar no mundo da programação, principalmente para
+            o desenvolvimento de interfaces de aplicações para a Web.
+          </p>
+
+          <p class="main__about__description">
+            Meu interesse pela área despertou no fim do ano de 2021, ao ter meu
+            primeiro contacto com <span lang="en">HTML</span> e
+            <span lang="en">CSS</span> em um curso de
+            <span lang="en">Web Designer</span>, onde pude perceber que, através
+            da tecnologia, eu poderia mudar não só minha vida, bem como a de
+            outras pessoas.
+          </p>
+
+          <p class="main__about__description">
+            Desde então, estou nesta jornada de intenso aprimoramento para
+            alcançar o mercado de trabalho como um profissional
+            <span lang="en">Front-End</span>, e muito em breve espero estar
+            contribuindo com minhas habilidades não só no mundo empresarial, mas
+            também na comunidade de programadores ao redor do mundo como um
+            todo.
+          </p>
+        </div>
+      </section>
+
+      <section class="main__skills" id="skills">
+        <h2 class="main__skills__title txt-center">
+          minhas <span lang="en">skills</span>
+        </h2>
+
+        <p class="main__skills__description">
+          atualmente estou me capacitando na base do
+          <span lang="en">Front-End</span>
+        </p>
+
+        <ul class="main__skills__list wrapper">
+          <li class="main__skill">
+            <span lang="en"
+              ><abbr title="Hypertext Markup Language">HTML</abbr>5</span
+            >
+            <i class="fa-brands fa-html5"></i>
+          </li>
+          <li class="main__skill">
+            <span lang="en"
+              ><abbr title="Cascading Style Sheets">CSS</abbr></span
+            >
+            <i class="fa-brands fa-css3"></i>
+          </li>
+          <li class="main__skill">
+            <span lang="en">JavaScript</span>
+            <i class="fa-brands fa-js"></i>
+          </li>
+        </ul>
+      </section>
+
+      <section class="main__hobbies" id="hobbies">
+        <h2 class="main__hobbies__title txt-center">
+          meus <span lang="en">hobbies</span>
+        </h2>
+
+        <p class="main__hobbies__description">
+          afinal, nem só de código viverá o programador.
+        </p>
+
+        <ul class="main__hobbies__list wrapper">
+          <li class="main__hobby">desenhar<i class="fa-solid fa-pen"></i></li>
+          <li class="main__hobby">ler<i class="fa-solid fa-book"></i></li>
+          <li class="main__hobby">
+            malhar<i class="fa-solid fa-dumbbell"></i>
+          </li>
+          <li class="main__hobby">jogar<i class="fa-solid fa-gamepad"></i></li>
+        </ul>
+      </section>
+
+      <section class="main__graduations" id="graduations">
+        <h2 class="main__graduations__title txt-center">minhas formações</h2>
+
+        <ul class="main__graduations__list wrapper">
+          <li class="main__graduation">
+            <img
+              src="./app/assets/images/senai-logo.svg"
+              alt=""
+              class="main__graduation__banner"
+            />
+            <h3 class="main__graduation__title">Web Designer</h3>
+            <p>2021 ─ SENAI</p>
+          </li>
+
+          <li class="main__graduation">
+            <img
+              src="./app/assets/images/senai-logo.svg"
+              alt=""
+              class="main__graduation__banner"
+            />
+            <h3 class="main__graduation__title">Desenvolvedor Mobile</h3>
+            <p>2022 ─ SENAI</p>
+          </li>
+
+          <li class="main__graduation">
+            <img
+              src="./app/assets/images/alura-logo-dark.svg"
+              alt=""
+              class="main__graduation__banner"
+            />
+            <h3 class="main__graduation__title">Oracle Next Education</h3>
+            <p>2022 ─ Alura</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="main__projects" id="projects">
+        <h2 class="main__projects__title txt-center">meu trabalho</h2>
+
+        <p class="main__projects__description">
+          Já tivemos o bastante por aqui de apresentação. Que tal dar uma olhada
+          nos meus projetos?
+        </p>
+
+        <button class="main__projects__button" type="button" data-element="projects-btn">mostre-me</button>
+
+        <div class="main__projects__list" data-element="projects-list"></div>
+      </section>
+    </main>
+
+    <aside class="contact wrapper" id="contact" data-element="form">
+      <img
+        class="contact__banner"
+        src="./app/assets/images/undraw_subscribe_vspl.svg"
+        alt="ilustração: Mulher ao lado de um grande envelope. Sua pele é negra, ela veste calças e sapatos pretos, e um casaco azul. O envelope está aberto"
+      />
+
+      <div class="contact__content wrapper">
+        <form class="contact__form">
+          <fieldset class="contact__form__box wrapper">
+            <legend class="contact__title">Contato</legend>
+            <p class="contact__description">
+              Quer entrar em contato?
+              <br />
+              Preencha o formulário e em breve entrarei em contato
+            </p>
+
+            <div class="contact__form__field wrapper">
+              <label class="contact__form__label" for="form-name">Nome:</label>
+              <input
+                type="text"
+                name="formName"
+                class="contact__form__input"
+                id="form-name"
+              />
+            </div>
+            <div class="contact__form__field wrapper">
+              <label class="contact__form__label" for="form-email"
+                >Email:</label
+              >
+              <input
+                type="text"
+                name="formEmail"
+                class="contact__form__input"
+                id="form-email"
+              />
+            </div>
+            <div class="contact__form__field wrapper">
+              <label class="contact__form__label" for="form-subject"
+                >Assunto:</label
+              >
+              <input
+                type="text"
+                name="formSubject"
+                class="contact__form__input"
+                id="form-subject"
+              />
+            </div>
+            <div class="contact__form__field wrapper">
+              <label class="contact__form__label" for="form-message"
+                >Mensagem:</label
+              >
+              <textarea
+                name="formMessage"
+                class="contact__form__input"
+                id="form-message"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+
+            <input
+              type="submit"
+              value="entrar em contato"
+              class="contact__form__button"
+            />
+          </fieldset>
+        </form>
+      </div>
+    </aside>
+
+    <footer class="footer" data-element="footer">
+      <h3 class="footer__title">thiago rodrigues ─ desenvolvedor front-end</h3>
+      <p class="footer__description">
+        Feito por
+        <a class="footer__link" href="https://github.com/trsaints">@trsaints</a>
+        ─ 2022
+      </p>
+    </footer>
+
+    <button class="scroll__button" type="button" data-element="scroll-btn"><i class="fa-solid fa-arrow-up" ></i>Voltar ao topo</button>
+  </body>
+  <script src="./app/src/index.js" type="module"></script>
+</html>

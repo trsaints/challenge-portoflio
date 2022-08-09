@@ -1,0 +1,131 @@
+@import url(./animations.css);
+
+.main__projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.main__projects__description {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.main__projects__button {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.main__projects__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.main__project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  gap: 1rem;
+  border-radius: 0.25rem;
+  background-color: var(--c-white--ls);
+
+  box-shadow: 0.125rem 0.125rem 0.25rem var(--c-gray--ls);
+  width: 95vw;
+
+  animation: vanish 0.3s forwards;
+
+  overflow: hidden;
+}
+
+.main__project__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  padding: 1rem;
+}
+
+.main__project__banner {
+  max-width: 20rem;
+}
+
+.main__project__title {
+  font-weight: 700;
+}
+
+.main__project__description {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.main__project__buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.main__project__button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+
+  transition: all .2s ease-in-out;
+}
+
+.main__project__button:hover,
+.main__project__button:active {
+  transform: scale(1.05);
+}
+
+
+.main__project__button:first-child {
+  color: var(--c-main--ds);
+  background-color: var(--c-white--ls);
+  border: 0.125rem solid var(--c-main--ds);
+}
+
+.main__project__button:nth-child(2) {
+  color: var(--c-white--ls);
+  background-color: var(--c-main--ds);
+  border: 0.125rem solid var(--c-main--ds);
+}
+
+.main__project__button:first-child:hover {
+  background-color: var(--c-white--l);
+}
+
+.main__project__button:nth-child(2):hover {
+  background-color: var(--c-main--d);
+  border-color: var(--c-main--d);
+}
+
+@media screen and (min-width: 768px) {
+  .main__project {
+    max-width: 44rem;
+  }
+
+  .main__project__banner {
+    max-width: 38rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main__project {
+    max-width: 64rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main__project:nth-of-type(2n) .main__project__banner {
+    order: 2;
+  }
+
+  .main__project:nth-of-type(2n) .main__project__content {
+    order: 1;
+  }
+}

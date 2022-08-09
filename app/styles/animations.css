@@ -1,0 +1,29 @@
+@keyframes vanish {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes squash-menu {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 100vh;
+  }
+}
+
+@keyframes unsquash-menu {
+  from {
+    height: 100vh;
+  }
+
+  to {
+    height: 0;
+  }
+}

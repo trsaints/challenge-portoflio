@@ -1,0 +1,18 @@
+{
+  "name": "trsaints-portfolio",
+  "version": "1.0.0",
+  "description": "My very first portoflio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "frontend",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "trsaints (https://github.com/trsaints)",
+  "license": "ISC",
+  "type": "module"
+}

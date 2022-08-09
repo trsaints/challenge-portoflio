@@ -1,0 +1,41 @@
+
+.scroll__button {
+  border-radius: 100%;
+  border: none;
+  box-shadow: 0 0 .125rem var(--c-white--l);
+
+  width: 4.25rem;
+  height: 4.25rem;
+  text-align: center;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  font-size: .75rem;
+
+  background-color: var(--c-black--l);
+  color: var(--c-white--ls);
+
+  position: fixed;
+  left: 80%;
+  top: 87%;
+  z-index: 1000;
+
+  transition: all .2s ease-in-out;
+}
+
+.scroll__button i {
+  font-size: 1.7rem;
+}
+
+.scroll__button:active,
+.scroll__button:hover {
+  color: var(--c-main);
+  transform: scale(1.025);
+}
+
+
+@media screen and (min-width: 768px) {
+  .scroll__button {
+    left: 94%;
+  }
+}

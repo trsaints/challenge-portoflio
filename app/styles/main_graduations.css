@@ -1,0 +1,27 @@
+.main__graduations {
+  background-color: var(--c-white);
+  gap: .5rem;
+}
+
+.main__graduation {
+  flex: 1;
+  display: flex;
+  gap: .5rem;
+  flex-direction: column;
+  min-width: 12rem;
+}
+
+.main__graduation__banner {
+  height: 15rem;
+  background-color: var(--c-white--ls);
+
+  transition: all 0.2s ease-in-out;
+}
+
+.main__graduation__title {
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+.main__graduation__description {
+}

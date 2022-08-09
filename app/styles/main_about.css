@@ -1,0 +1,10 @@
+.main__about {
+  background-color: var(--c-main--ls);
+
+  box-shadow: 0 0 1rem var(--c-gray);
+}
+
+.main__about__content {
+  flex-direction: column;
+  gap: .5rem;
+}

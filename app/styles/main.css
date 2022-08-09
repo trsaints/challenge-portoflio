@@ -1,0 +1,98 @@
+@import url(./header.css);
+@import url(./main_content.css);
+@import url(./main_hero.css);
+@import url(./main_about.css);
+@import url(./main_projects.css);
+@import url(./main_graduations.css);
+@import url(./contact_form.css);
+@import url(./footer.css);
+@import url(./animations.css);
+@import url(./scroll_button.css);
+
+:root {
+  --c-black: hsl(260, 14%, 4%);
+  --c-black--l: hsl(260, 14%, 8%);
+  --c-gray--d: hsl(257, 9%, 25%);
+  --c-gray: hsl(257, 9%, 35%);
+  --c-gray--l: hsl(255, 9%, 50%);
+  --c-gray--ls: hsl(255, 9%, 70%);
+  --c-main--ls: hsl(196, 84%, 86%);
+  --c-main--l: hsl(196, 84%, 70%);
+  --c-main: #31bbed;
+  --c-main--d: hsl(196, 84%, 50%);
+  --c-main--ds: hsl(196, 84%, 40%);
+  --c-white: hsl(260, 48%, 90%);
+  --c-white--l: hsl(260, 100%, 95%);
+  --c-white--ls: hsl(260, 100%, 100%);
+}
+
+* {
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  letter-spacing: .125rem;
+
+  background-color: var(--c-white--l);
+  color: var(--c-black--l);
+
+  opacity: 0;
+
+  animation: vanish 0.5s forwards;
+}
+
+textarea {
+  resize: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: capitalize;
+}
+
+br {
+  margin-bottom: 1rem;
+}
+
+i {
+  padding: .125rem;
+}
+
+a {
+  display: inline-flex;
+  gap: .25rem;
+  color: inherit;
+}
+
+.main.toggled,
+.contact.toggled,
+.footer.toggled,
+.scroll__button.toggled {
+  display: none;
+}

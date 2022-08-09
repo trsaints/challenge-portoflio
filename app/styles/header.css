@@ -1,0 +1,111 @@
+@import url(./animations.css);
+
+.header {
+  padding: 1.25rem 5rem;
+  background-color: var(--c-black);
+  color: var(--c-white--ls);
+
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.header__logo {
+  display: none;
+}
+
+.header__menu {
+  display: grid;
+  place-items: center;
+}
+
+.header__menu__btn {
+  display: inline-block;
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  font-size: 120%;
+}
+
+.header__menu__btn:hover {
+  color: var(--c-main);
+}
+
+.header__menu__btn:active {
+  color: var(--c-main--ds);
+}
+
+.header__nav {
+  display: grid;
+  place-items: flex-start;
+
+  height: 0;
+  overflow: hidden;
+}
+
+.header__nav.toggled {
+  animation: squash-menu .5s forwards;
+}
+
+.header__nav__links {
+  flex-direction: column;
+  text-align: center;
+
+  padding-top: 2.5rem;
+}
+
+.header__nav__link {
+  display: inline-block;
+  border: 0.25rem solid transparent;
+  padding: 0.5rem;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+  font-variant: small-caps;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.header__nav__link:hover {
+  color: var(--c-main);
+  border-bottom-color: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  .header__nav {
+    animation: unsquash-menu .2s forwards;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    flex-direction: row;
+  }
+
+  .header__logo {
+    display: inline-block;
+    min-width: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+    border: 0.125rem solid;
+  }
+
+  .header__menu__btn {
+    display: none;
+  }
+
+  .header__nav {
+    height: 100%;
+  }
+
+  .header__nav__links {
+    flex-direction: row;
+
+    padding-top: 0;
+  }
+}

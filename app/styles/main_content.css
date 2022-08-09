@@ -1,0 +1,96 @@
+.main__hero,
+.main__about,
+.main__skills,
+.main__hobbies,
+.main__graduations,
+.main__projects,
+.contact {
+  padding: 6rem 1rem 2.5rem 1rem;
+}
+
+.main__about__title,
+.main__skills__title,
+.main__hobbies__title,
+.main__graduations__title,
+.main__projects__title,
+.contact__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.main__skills__list,
+.main__hobbies__list,
+.main__graduations__list {
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.main__skills__description,
+.main__hobbies__description {
+  text-align: center;
+}
+
+.main__skill,
+.main__hobby {
+  font-weight: 700;
+
+  width: 10rem;
+  height: 10rem;
+  padding: 1rem;
+
+  background-color: var(--c-white--ls);
+  align-items: flex-end;
+
+  transition: all ease-in-out 0.2s;
+}
+
+.main__skill:hover,
+.main__hobby:hover,
+.main__graduation__banner:hover {
+  transform: scale(1.05);
+  color: var(--c-main);
+}
+
+.main__skills__list,
+.main__hobbies__list,
+.main__graduations__list {
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.main__skill,
+.main__hobby {
+  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .main__hero,
+  .main__about,
+  .main__skills,
+  .main__hobbies,
+  .main__graduations,
+  .main__projects,
+  .contact {
+    padding: 6rem 2.5rem 2.5rem 2.5rem;
+  }
+
+  .main__skills__list,
+  .main__hobbies__list,
+  .main__graduations__list {
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main__hero,
+  .main__about,
+  .main__skills,
+  .main__hobbies,
+  .main__graduations,
+  .main__projects,
+  .contact {
+    padding: 8rem 5rem 2.5rem 5rem;
+  }
+}
