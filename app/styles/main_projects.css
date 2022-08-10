@@ -83,24 +83,26 @@
 
 
 .main__project__button:first-child {
-  color: var(--c-main--ds);
+  color: var(--c-main--d);
   background-color: var(--c-white--ls);
-  border: 0.125rem solid var(--c-main--ds);
+  border: 0.125rem solid var(--c-main--d);
 }
 
 .main__project__button:nth-child(2) {
   color: var(--c-white--ls);
-  background-color: var(--c-main--ds);
-  border: 0.125rem solid var(--c-main--ds);
+  background-color: var(--c-main--d);
+  border: 0.125rem solid var(--c-main--d);
 }
 
 .main__project__button:first-child:hover {
+  color: var(--c-main--ds);
   background-color: var(--c-white--l);
+  border: 0.125rem solid var(--c-main--ds);
 }
 
 .main__project__button:nth-child(2):hover {
-  background-color: var(--c-main--d);
-  border-color: var(--c-main--d);
+  background-color: var(--c-main--ds);
+  border-color: var(--c-main--ds);
 }
 
 @media screen and (min-width: 768px) {
