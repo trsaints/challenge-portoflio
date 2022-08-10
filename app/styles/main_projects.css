@@ -74,7 +74,8 @@
 }
 
 .main__project__banner {
-  max-width: 20rem;
+  width: 100%;
+  max-width: 95vw;
 }
 
 .main__project__title {
@@ -141,7 +142,15 @@
   }
 
   .main__project__banner {
-    max-width: 38rem;
+    max-width: 44rem;
+  }
+
+  .main__project__title {
+    font-size: 1.25rem;
+  }
+
+  .main__project__description {
+    font-size: 1rem;
   }
 }
 
@@ -151,6 +160,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+  
+  .main__project__banner {
+    max-width: 35rem;
   }
 
   .main__project:nth-of-type(2n) .main__project__banner {
