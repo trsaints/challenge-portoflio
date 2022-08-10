@@ -33,7 +33,7 @@
 }
 
 .main__projects__button:focus {
-  outline: .125rem solid var(--c-black);
+  outline: 0.125rem solid var(--c-black);
   transform: scale(1.03);
 }
 
@@ -60,10 +60,8 @@
   overflow: hidden;
 }
 
-.main__project:hover
-  .main__project__title
-  .main__project:active
-  .main__project__title {
+.main__project:hover .main__project__title,
+.main__project:active .main__project__title {
   color: var(--c-main--ds);
 }
 
@@ -82,11 +80,7 @@
 .main__project__title {
   font-weight: 700;
 
-  transition: all 0.2s ease-in-out;
-}
-
-.main__project:hover .main__project__title {
-  color: var(--c-main--ds);
+  transition: all 0.3s ease-in-out;
 }
 
 .main__project__description {
@@ -115,7 +109,7 @@
 }
 
 .main__project__button:focus {
-  outline: .125rem solid var(--c-black);
+  outline: 0.125rem solid var(--c-black);
 }
 
 .main__project__button:first-child {
