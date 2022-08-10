@@ -14,8 +14,27 @@
 }
 
 .main__projects__button {
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   margin-bottom: 1rem;
+  background-color: var(--c-black);
+  color: var(--c-white--ls);
+  border: none;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.main__projects__button:hover,
+.main__projects__button:active,
+.main__projects__button:focus {
+  background-color: var(--c-main);
+  color: var(--c-black);
+
+  box-shadow: 0.25rem 0.25rem 0.125rem var(--c-gray);
+}
+
+.main__projects__button:focus {
+  outline: .125rem solid var(--c-black);
+  transform: scale(1.03);
 }
 
 .main__projects__list {
@@ -41,6 +60,13 @@
   overflow: hidden;
 }
 
+.main__project:hover
+  .main__project__title
+  .main__project:active
+  .main__project__title {
+  color: var(--c-main--ds);
+}
+
 .main__project__content {
   display: flex;
   flex-direction: column;
@@ -55,6 +81,12 @@
 
 .main__project__title {
   font-weight: 700;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.main__project:hover .main__project__title {
+  color: var(--c-main--ds);
 }
 
 .main__project__description {
@@ -73,14 +105,18 @@
   font-weight: 500;
   font-size: 1rem;
 
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .main__project__button:hover,
-.main__project__button:active {
-  transform: scale(1.05);
+.main__project__button:active,
+.main__project__button:focus {
+  transform: scale(1.03);
 }
 
+.main__project__button:focus {
+  outline: .125rem solid var(--c-black);
+}
 
 .main__project__button:first-child {
   color: var(--c-main--d);
