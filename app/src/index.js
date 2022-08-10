@@ -2,6 +2,7 @@ import { toggleMenu, escapeMenu, exitMenu } from "./services/menu_service.js";
 import { setLinks } from "./services/dataset_service.js";
 import { renderProjects } from "./controllers/project_controller.js";
 import { scrollTop } from "./services/scroll_button_service.js";
+import { formService } from "./services/form_service.js";
 
 (() => {
   const menu = document.querySelector("[data-element='menu']");
@@ -26,4 +27,5 @@ import { scrollTop } from "./services/scroll_button_service.js";
   scrollBtn.addEventListener("click", scrollTop);
 
   setLinks();
+  formService.setRequiredForm();
 })();
