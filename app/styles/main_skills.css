@@ -1,0 +1,17 @@
+.main__skill {
+  background-size: 4rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.main__skill:first-child:hover {
+  background-image: url('../assets/images/html5-brands.svg');
+}
+
+.main__skill:nth-child(2):hover {
+  background-image: url('../assets/images/css3-brands.svg');
+}
+
+.main__skill:nth-child(3):hover {
+  background-image: url('../assets/images/js-brands.svg');
+}

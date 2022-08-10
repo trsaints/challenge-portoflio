@@ -49,9 +49,9 @@
 }
 
 .contact__form__label:hover, 
-.contact__form__label:focus, 
 .contact__form__label:active {
   color: var(--c-main--ds);
+  transform: translateX(1%);
 }
 
 .contact__form__input {
@@ -77,11 +77,17 @@
   transition: all 0.2s ease-in-out;
 }
 
-.contact__form__button:hover {
+.contact__form__button:hover,
+.contact__form__button:focus {
   background-color: var(--c-main);
   color: var(--c-black);
 
   box-shadow: 0.25rem 0.25rem 0.125rem var(--c-gray);
+}
+
+.contact__form__button:focus {
+  outline: .125rem solid var(--c-black);
+  transform: scale(1.03);
 }
 
 @media screen and (min-width: 728px) {

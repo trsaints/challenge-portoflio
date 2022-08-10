@@ -7,7 +7,9 @@ function createProjectCard(project) {
   const projectBanner = createProjectBanner(project.banner);
   const projectContent = createProjectContent(
     project.title,
-    project.description
+    project.description,
+    project.repository,
+    project.demo
   );
 
   projectCard.appendChild(projectBanner);
@@ -37,11 +39,11 @@ function createProjectBanner(src) {
   return projectBanner;
 }
 
-function createProjectContent(title, desc) {
+function createProjectContent(title, desc, repo, demo) {
   const projectContent = generateElement("div", "main__project__content");
   const projectTitle = generateElement("h3", "main__project__title");
   const projectDesc = generateElement("p", "main__project__description");
-  const projectButtons = createProjectButtons();
+  const projectButtons = createProjectButtons(repo, demo);
 
   projectTitle.textContent = title;
   projectDesc.textContent = desc;
@@ -53,7 +55,7 @@ function createProjectContent(title, desc) {
   return projectContent;
 }
 
-function createProjectButtons() {
+function createProjectButtons(repo, demo) {
   const buttons = generateElement("div", "main__project__buttons");
   const repoBtn = generateElement("button", "main__project__button");
   const demoBtn = generateElement("button", "main__project__button");
@@ -64,7 +66,16 @@ function createProjectButtons() {
   demoBtn.textContent = "Ver Demo";
   buttons.appendChild(demoBtn);
 
+  setProjectLink(repoBtn, repo);
+  setProjectLink(demoBtn, demo);
+
   return buttons;
+}
+
+function setProjectLink(target, url) {
+  target.addEventListener("click", () => {
+    window.open(url);
+  });
 }
 
 function renderProjects() {

@@ -3,6 +3,7 @@
 @import url(./main_hero.css);
 @import url(./main_about.css);
 @import url(./main_projects.css);
+@import url(./main_skills.css);
 @import url(./main_graduations.css);
 @import url(./contact_form.css);
 @import url(./footer.css);
@@ -42,7 +43,7 @@ body {
   font-weight: 300;
   font-size: 1.125rem;
   line-height: 1.2;
-  letter-spacing: .125rem;
+  letter-spacing: 0.125rem;
 
   background-color: var(--c-white--l);
   color: var(--c-black--l);
@@ -81,12 +82,12 @@ br {
 }
 
 i {
-  padding: .125rem;
+  padding: 0.125rem;
 }
 
 a {
   display: inline-flex;
-  gap: .25rem;
+  gap: 0.25rem;
   color: inherit;
 }
 
@@ -96,3 +97,5 @@ a {
 .scroll__button.toggled {
   display: none;
 }
+
+
