@@ -1,7 +1,14 @@
+@import url(./animations.css);
+
 .main__skill {
-  background-size: 4rem;
+  background-size: 0;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.main__skill:hover,
+.main__skill:active {
+  animation: expand-bg .3s forwards;
 }
 
 .main__skill:first-child:hover {

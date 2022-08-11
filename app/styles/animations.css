@@ -27,3 +27,13 @@
     height: 0;
   }
 }
+
+@keyframes expand-bg {
+  from {
+    background-size: 0;
+  }
+
+  to {
+    background-size: 4rem; 
+  }
+}
