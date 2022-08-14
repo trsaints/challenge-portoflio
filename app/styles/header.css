@@ -54,6 +54,7 @@
 
 .header__nav__links {
   flex-direction: column;
+  gap: .5rem;
   text-align: center;
 
   padding-top: 2.5rem;
