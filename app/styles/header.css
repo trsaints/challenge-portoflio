@@ -30,6 +30,8 @@
   color: inherit;
   border: none;
   font-size: 120%;
+
+  transition: all .2s ease-in-out;
 }
 
 .header__menu__btn:hover {
@@ -72,9 +74,13 @@
   transition: all 0.2s ease-in-out;
 }
 
-.header__nav__link:hover {
+.header__nav__link:hover, .header__nav__link:focus {
   color: var(--c-main);
   border-bottom-color: inherit;
+}
+
+.header__nav__link:focus {
+  outline: none;
 }
 
 @media screen and (max-width: 768px) {
