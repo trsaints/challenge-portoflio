@@ -40,6 +40,11 @@
   max-width: calc(100vw - 2.5rem);
 }
 
+.contact__form__field:is(:focus-within) .contact__form__label{
+  color: var(--c-main--ds);
+  transform: translateX(1%);
+}
+
 .contact__form__label {
   color: var(--c-gray);
   font-weight: 500;
@@ -51,7 +56,6 @@
 .contact__form__label:hover, 
 .contact__form__label:active {
   color: var(--c-main--ds);
-  transform: translateX(1%);
 }
 
 .contact__form__input {
