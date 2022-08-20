@@ -33,15 +33,27 @@ function generateProjects(projects) {
 }
 
 function createProjectBanner(src) {
-  const projectBanner = elementController.generateElement("img", "main__project__banner");
+  const projectBanner = elementController.generateElement(
+    "img",
+    "main__project__banner"
+  );
   projectBanner.setAttribute("src", src);
   return projectBanner;
 }
 
 function createProjectContent(title, desc, repo, demo) {
-  const projectContent = elementController.generateElement("div", "main__project__content");
-  const projectTitle = elementController.generateElement("h3", "main__project__title");
-  const projectDesc = elementController.generateElement("p", "main__project__description");
+  const projectContent = elementController.generateElement(
+    "div",
+    "main__project__content"
+  );
+  const projectTitle = elementController.generateElement(
+    "h3",
+    "main__project__title"
+  );
+  const projectDesc = elementController.generateElement(
+    "p",
+    "main__project__description"
+  );
   const projectButtons = createProjectButtons(repo, demo);
 
   projectTitle.textContent = title;
@@ -55,9 +67,18 @@ function createProjectContent(title, desc, repo, demo) {
 }
 
 function createProjectButtons(repo, demo) {
-  const buttons = elementController.generateElement("div", "main__project__buttons");
-  const repoBtn = elementController.generateElement("button", "main__project__button");
-  const demoBtn = elementController.generateElement("button", "main__project__button");
+  const buttons = elementController.generateElement(
+    "div",
+    "main__project__buttons"
+  );
+  const repoBtn = elementController.generateElement(
+    "button",
+    "main__project__button"
+  );
+  const demoBtn = elementController.generateElement(
+    "button",
+    "main__project__button"
+  );
 
   repoBtn.textContent = "Repositório";
   buttons.appendChild(repoBtn);
@@ -83,4 +104,4 @@ function renderProjects() {
   });
 }
 
-export { renderProjects };
+export const projectController = { renderProjects };
