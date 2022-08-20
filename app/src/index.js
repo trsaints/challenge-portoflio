@@ -1,7 +1,7 @@
 import { menuController } from "./controllers/menu_controller.js";
 import { datasetController } from "./controllers/dataset_controller.js";
 import { projectController } from "./controllers/project_controller.js";
-import { scrollTop } from "./services/scroll_button_service.js";
+import { scrollController } from "./controllers/scroll_controller.js";
 import { formController } from "./controllers/form_controller.js";
 
 (() => {
@@ -24,7 +24,7 @@ import { formController } from "./controllers/form_controller.js";
   });
 
   projectsBtn.addEventListener("click", projectController.renderProjects);
-  scrollBtn.addEventListener("click", scrollTop);
+  scrollBtn.addEventListener("click", scrollController.scrollTop);
 
   datasetController.setDataLink();
   formController.setRequiredFields();
