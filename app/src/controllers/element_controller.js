@@ -11,14 +11,7 @@ function clearContent(target) {
   }
 }
 
-function openLink(link, url) {
-  link.addEventListener("click", () => {
-    window.open(url);
-  });
-}
-
 export const elementController = {
   generateElement,
   clearContent,
-  openLink
 }

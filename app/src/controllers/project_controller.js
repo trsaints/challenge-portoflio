@@ -1,5 +1,6 @@
 import { projectService } from "../services/projects_service.js";
 import { elementController } from "./element_controller.js";
+import { linkController } from "./link_controller.js";
 
 function createProjectCard(project) {
   const projectCard = elementController.generateElement("div", "main__project");
@@ -86,8 +87,8 @@ function createProjectButtons(repo, demo) {
   demoBtn.textContent = "Ver Demo";
   buttons.appendChild(demoBtn);
 
-  elementController.openLink(repoBtn, repo);
-  elementController.openLink(demoBtn, demo);
+  linkController.openLink(repoBtn, repo);
+  linkController.openLink(demoBtn, demo);
 
   return buttons;
 }
