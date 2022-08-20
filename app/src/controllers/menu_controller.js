@@ -28,8 +28,9 @@ function escapeMenu(key) {
 
 function exitMenu(target) {
   const isNavlink = target.parentNode === navlinks;
+  const isExpanded = navbar.classList.contains("expanded");
 
-  if (!isNavlink) {
+  if (!isNavlink || !isExpanded) {
     return;
   }
 
