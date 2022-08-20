@@ -1,3 +1,5 @@
+import { scrollController } from "./scroll_controller.js";
+
 const mainContent = document.querySelector("[data-element='main']");
 const contactContent = document.querySelector("[data-element='contact']");
 const footer = document.querySelector("[data-element='footer']");
@@ -37,11 +39,7 @@ function exitMenu(menu, target) {
   }
 
   let currentURL = target.getAttribute("href");
-  scrollTo(currentURL);
-}
-
-function scrollTo(section) {
-  window.location.href = section;
+  scrollController.scrollTo(currentURL);
 }
 
 export const menuController = { toggleMenu, escapeMenu, exitMenu };

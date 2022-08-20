@@ -24,7 +24,9 @@ import { formController } from "./controllers/form_controller.js";
   });
 
   projectsBtn.addEventListener("click", projectController.renderProjects);
-  scrollBtn.addEventListener("click", scrollController.scrollTop);
+  scrollBtn.addEventListener("click", () => {
+    scrollController.scrollTo("#main")
+  });
 
   datasetController.setDataLink();
   formController.setRequiredFields();
