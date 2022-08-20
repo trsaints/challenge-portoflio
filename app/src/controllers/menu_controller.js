@@ -44,4 +44,4 @@ function scrollTo(section) {
   window.location.href = section;
 }
 
-export { toggleMenu, escapeMenu, exitMenu };
+export const menuController = { toggleMenu, escapeMenu, exitMenu };
