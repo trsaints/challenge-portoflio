@@ -1,4 +1,4 @@
-function setLinks() {
+function setDataLink() {
   const navlinks = document.querySelector("[data-element='nav-links']");
 
   for (let child of navlinks.children) {
@@ -6,4 +6,4 @@ function setLinks() {
   }
 }
 
-export { setLinks };
+export const datasetController = { setDataLink };

@@ -200,7 +200,7 @@
       </section>
     </main>
 
-    <aside class="contact wrapper" id="contact" data-element="form">
+    <aside class="contact wrapper" id="contact" data-element="contact">
       <img
         class="contact__banner"
         src="./app/assets/images/undraw_subscribe_vspl.svg"
@@ -208,7 +208,7 @@
       />
 
       <div class="contact__content wrapper">
-        <form class="contact__form">
+        <form class="contact__form" data-element="form">
           <fieldset class="contact__form__box wrapper">
             <legend class="contact__title">Contato</legend>
             <p class="contact__description">
@@ -221,7 +221,7 @@
               <label class="contact__form__label" for="form-name">Nome:</label>
               <input
                 type="text"
-                name="formName"
+                name="name"
                 class="contact__form__input"
                 id="form-name"
               />
@@ -231,8 +231,8 @@
                 >Email:</label
               >
               <input
-                type="text"
-                name="formEmail"
+                type="email"
+                name="email"
                 class="contact__form__input"
                 id="form-email"
               />
@@ -243,7 +243,7 @@
               >
               <input
                 type="text"
-                name="formSubject"
+                name="subject"
                 class="contact__form__input"
                 id="form-subject"
               />
@@ -253,7 +253,7 @@
                 >Mensagem:</label
               >
               <textarea
-                name="formMessage"
+                name="message"
                 class="contact__form__input"
                 id="form-message"
                 cols="30"
@@ -261,12 +261,9 @@
               ></textarea>
             </div>
 
-            <input
-              type="submit"
-              value="entrar em contato"
-              class="contact__form__button"
-              readonly
-            />
+            <button type="submit" class="contact__form__button" readonly> 
+              entrar em contato
+            </button>
           </fieldset>
         </form>
       </div>

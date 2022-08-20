@@ -1,8 +1,8 @@
-import { toggleMenu, escapeMenu, exitMenu } from "./services/menu_service.js";
-import { setLinks } from "./services/dataset_service.js";
-import { renderProjects } from "./controllers/project_controller.js";
-import { scrollTop } from "./services/scroll_button_service.js";
-import { formService } from "./services/form_service.js";
+import { menuController } from "./controllers/menu_controller.js";
+import { datasetController } from "./controllers/dataset_controller.js";
+import { projectController } from "./controllers/project_controller.js";
+import { scrollController } from "./controllers/scroll_controller.js";
+import { formController } from "./controllers/form_controller.js";
 
 (() => {
   const menu = document.querySelector("[data-element='menu']");
@@ -12,20 +12,22 @@ import { formService } from "./services/form_service.js";
   const scrollBtn = document.querySelector("[data-element='scroll-btn']");
 
   menu.addEventListener("click", () => {
-    toggleMenu(navbar);
+    menuController.toggleMenu(navbar);
   });
 
   document.addEventListener("keydown", (evt) => {
-    escapeMenu(navbar, evt.key);
+    menuController.escapeMenu(navbar, evt.key);
   });
 
   navlinks.addEventListener("click", (evt) => {
-    exitMenu(navbar, evt.target);
+    menuController.exitMenu(navbar, evt.target);
   });
 
-  projectsBtn.addEventListener("click", renderProjects);
-  scrollBtn.addEventListener("click", scrollTop);
+  projectsBtn.addEventListener("click", projectController.renderProjects);
+  scrollBtn.addEventListener("click", () => {
+    scrollController.scrollTo("#main")
+  });
 
-  setLinks();
-  formService.setRequiredForm();
+  datasetController.setDataLink();
+  formController.setRequiredFields();
 })();

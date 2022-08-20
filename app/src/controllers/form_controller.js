@@ -1,4 +1,4 @@
-function setRequiredForm() {
+function setRequiredFields() {
   const formFields = document.querySelectorAll("[data-element='form-field']");
 
   formFields.forEach((field) => {
@@ -14,6 +14,6 @@ function setRequiredForm() {
   });
 }
 
-export const formService = {
-  setRequiredForm,
+export const formController = {
+  setRequiredFields,
 };
