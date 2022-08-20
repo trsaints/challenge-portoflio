@@ -86,16 +86,10 @@ function createProjectButtons(repo, demo) {
   demoBtn.textContent = "Ver Demo";
   buttons.appendChild(demoBtn);
 
-  setProjectLink(repoBtn, repo);
-  setProjectLink(demoBtn, demo);
+  elementController.openLink(repoBtn, repo);
+  elementController.openLink(demoBtn, demo);
 
   return buttons;
-}
-
-function setProjectLink(target, url) {
-  target.addEventListener("click", () => {
-    window.open(url);
-  });
 }
 
 function renderProjects() {
