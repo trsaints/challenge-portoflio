@@ -1,45 +1,42 @@
 import { scrollController } from "./scroll_controller.js";
 
+const navlinks = document.querySelector("[data-element='nav-links']");
+const navbar = document.querySelector("[data-element='navbar']");
 const mainContent = document.querySelector("[data-element='main']");
 const contactContent = document.querySelector("[data-element='contact']");
 const footer = document.querySelector("[data-element='footer']");
 const scrollBtn = document.querySelector("[data-element='scroll-btn']");
 
-function toggleContent() {
+function toggleMenu() {
   mainContent.classList.toggle("toggled");
   contactContent.classList.toggle("toggled");
   footer.classList.toggle("toggled");
   scrollBtn.classList.toggle("toggled");
+
+  navbar.classList.toggle("expanded");
 }
 
-function toggleMenu(menu) {
-  menu.classList.toggle("toggled");
-  toggleContent();
-}
-
-function escapeMenu(menu, key) {
-  if (key === "Escape") {
-    if (menu.classList.contains("toggled")) {
-      menu.classList.remove("toggled");
-
-      toggleContent();
-    }
-  }
-}
-
-function exitMenu(menu, target) {
-  if (target.dataset.menu !== "link") {
+function escapeMenu(key) {
+  if (key !== "Escape") {
     return;
   }
 
-  if (menu.classList.contains("toggled")) {
-    menu.classList.remove("toggled");
+  if (navbar.classList.contains("expanded")) {
+    toggleMenu();
+  }
+}
 
-    toggleContent();
+function exitMenu(target) {
+  const isNavlink = target.parentNode === navlinks;
+
+  if (!isNavlink) {
+    return;
   }
 
-  let currentURL = target.getAttribute("href");
-  scrollController.scrollTo(currentURL);
+  toggleMenu();
+
+  const linkURL = target.getAttribute("href");
+  scrollController.scrollTo(linkURL);
 }
 
 export const menuController = { toggleMenu, escapeMenu, exitMenu };

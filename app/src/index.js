@@ -5,22 +5,21 @@ import { scrollController } from "./controllers/scroll_controller.js";
 import { formController } from "./controllers/form_controller.js";
 
 (() => {
-  const menu = document.querySelector("[data-element='menu']");
-  const navbar = document.querySelector("[data-element='navbar']");
+  const menuBtn = document.querySelector("[data-element='menu']");
   const navlinks = document.querySelector("[data-element='nav-links']");
   const projectsBtn = document.querySelector("[data-element='projects-btn']");
   const scrollBtn = document.querySelector("[data-element='scroll-btn']");
 
-  menu.addEventListener("click", () => {
-    menuController.toggleMenu(navbar);
+  menuBtn.addEventListener("click", () => {
+    menuController.toggleMenu();
   });
 
   document.addEventListener("keydown", (evt) => {
-    menuController.escapeMenu(navbar, evt.key);
+    menuController.escapeMenu(evt.key);
   });
 
   navlinks.addEventListener("click", (evt) => {
-    menuController.exitMenu(navbar, evt.target);
+    menuController.exitMenu(evt.target);
   });
 
   projectsBtn.addEventListener("click", projectController.renderProjects);
