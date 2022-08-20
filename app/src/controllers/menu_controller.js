@@ -1,18 +1,18 @@
 const mainContent = document.querySelector("[data-element='main']");
-const contactForm = document.querySelector("[data-element='form']");
+const contactContent = document.querySelector("[data-element='contact']");
 const footer = document.querySelector("[data-element='footer']");
 const scrollBtn = document.querySelector("[data-element='scroll-btn']");
 
 function toggleContent() {
   mainContent.classList.toggle("toggled");
-  contactForm.classList.toggle("toggled");
+  contactContent.classList.toggle("toggled");
   footer.classList.toggle("toggled");
   scrollBtn.classList.toggle("toggled");
 }
 
 function toggleMenu(element) {
   element.classList.toggle("toggled");
-  toggleContent()
+  toggleContent();
 }
 
 function escapeMenu(element, key) {
@@ -21,7 +21,7 @@ function escapeMenu(element, key) {
       element.classList.remove("toggled");
     }
 
-    toggleContent()
+    toggleContent();
   }
 }
 
@@ -33,7 +33,7 @@ function exitMenu(element, target) {
   if (element.classList.contains("toggled")) {
     element.classList.remove("toggled");
 
-    toggleContent()
+    toggleContent();
   }
 
   let currentURL = target.getAttribute("href");
