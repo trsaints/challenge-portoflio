@@ -10,28 +10,28 @@ function toggleContent() {
   scrollBtn.classList.toggle("toggled");
 }
 
-function toggleMenu(element) {
-  element.classList.toggle("toggled");
+function toggleMenu(menu) {
+  menu.classList.toggle("toggled");
   toggleContent();
 }
 
-function escapeMenu(element, key) {
+function escapeMenu(menu, key) {
   if (key === "Escape") {
-    if (element.classList.contains("toggled")) {
-      element.classList.remove("toggled");
-    }
+    if (menu.classList.contains("toggled")) {
+      menu.classList.remove("toggled");
 
-    toggleContent();
+      toggleContent();
+    }
   }
 }
 
-function exitMenu(element, target) {
-  if (target.dataset.element !== "link") {
+function exitMenu(menu, target) {
+  if (target.dataset.menu !== "link") {
     return;
   }
 
-  if (element.classList.contains("toggled")) {
-    element.classList.remove("toggled");
+  if (menu.classList.contains("toggled")) {
+    menu.classList.remove("toggled");
 
     toggleContent();
   }
