@@ -14,9 +14,5 @@
   ],
   "author": "trsaints (https://github.com/trsaints)",
   "license": "ISC",
-  "type": "module",
-  "devDependencies": {
-    "mocha": "^10.0.0",
-    "three": "^0.143.0"
-  }
+  "type": "module"
 }
