@@ -28,12 +28,22 @@
   }
 }
 
-@keyframes expand-bg {
+@keyframes zoom-in-bg {
   from {
     background-size: 0;
   }
 
   to {
     background-size: 4rem; 
+  }
+}
+
+@keyframes zoom-out-bg {
+  from {
+    background-size: 4rem;
+  }
+
+  to {
+    background-size: 0;
   }
 }
