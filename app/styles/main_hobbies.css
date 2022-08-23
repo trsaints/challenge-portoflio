@@ -1,0 +1,32 @@
+.main__hobby {
+  background-position: center -200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.main__hobby:first-child {
+  background-image: url('../assets/images/undraw_artist_custom.svg');
+  background-size: 11rem;
+}
+
+.main__hobby:nth-child(2) {
+  background-image: url('../assets/images/undraw_reading_custom.svg');
+}
+
+.main__hobby:nth-child(3) {
+  background-image: url("../assets/images/undraw_running_person.svg");
+  background-size: 8rem;
+}
+
+.main__hobby:nth-child(4) {
+  background-image: url("../assets/images/undraw_gaming.svg");
+}
+
+.main__hobby:hover,
+.main__hobby:active {
+  animation: slide-in-bg 0.3s forwards;
+}
+
+.main__hobby:not(:hover) {
+  animation: slide-out-bg 0.3s forwards;
+}

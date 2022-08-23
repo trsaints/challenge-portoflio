@@ -28,12 +28,42 @@
   }
 }
 
-@keyframes expand-bg {
+@keyframes zoom-in-bg {
   from {
     background-size: 0;
   }
 
   to {
     background-size: 4rem; 
+  }
+}
+
+@keyframes zoom-out-bg {
+  from {
+    background-size: 4rem;
+  }
+
+  to {
+    background-size: 0;
+  }
+}
+
+@keyframes slide-in-bg {
+  from {
+    background-position: center -200px;
+  }
+
+  to {
+    background-position: center center;
+  }
+}
+
+@keyframes slide-out-bg {
+  from {
+    background-position: center center;
+  }
+
+  to {
+    background-position: center -200px;
   }
 }
