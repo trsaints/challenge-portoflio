@@ -1,0 +1,123 @@
+{
+  "info": {
+    "projects": [
+      {
+        "name": "Alura Geek",
+        "desc": "",
+        "technologies": [],
+        "repoURL": "",
+        "URL": ""
+      },
+      {
+        "name": "Jogo da Forca",
+        "desc": "",
+        "technologies": [],
+        "repoURL": "",
+        "URL": ""
+      },
+      {
+        "name": "Visual Identity",
+        "desc": "",
+        "technologies": [],
+        "repoURL": "",
+        "URL": ""
+      },
+      {
+        "name": "Press Start",
+        "desc": "",
+        "technologies": [],
+        "repoURL": "",
+        "URL": ""
+      },
+      {
+        "name": "Codificador de Texto",
+        "desc": "",
+        "technologies": [],
+        "repoURL": "",
+        "URL": ""
+      },
+      {
+        "name": "Easy Jobs",
+        "desc": "",
+        "technologies": [],
+        "repoURL": "",
+        "URL": ""
+      },
+      {
+        "name": "Portfolio",
+        "desc": "",
+        "technologies": [],
+        "repoURL": "",
+        "URL": ""
+      }
+    ],
+    "skills": [
+      {
+        "name": "HTML5",
+        "desc": "",
+        "abbr": "Hypertext Markup Language"
+      },
+      {
+        "name": "CSS3",
+        "desc": "",
+        "abbr": "Cascading Style Sheets"
+      },
+      {
+        "name": "JS",
+        "desc": "",
+        "abbr": "JavaScript"
+      },
+      {
+        "name": "Excel",
+        "desc": "",
+        "abbr": ""
+      }
+    ],
+    "hobbies": [
+      {
+        "name": "Treinar"
+      },
+      {
+        "name": "Jogar"
+      },
+      {
+        "name": "Desenhar"
+      },
+      {
+        "name": "Ler"
+      }
+    ],
+    "degrees": [
+      {
+        "name": "Web Designer",
+        "school": "SENAI",
+        "desc": "",
+        "year": "2021",
+        "topics": []
+      },
+      {
+        "name": "Oracle Next Education",
+        "school": "Alura",
+        "desc": "",
+        "year": "2022",
+        "topics": []
+      },
+      {
+        "name": "Google IT Support",
+        "school": "Coursera",
+        "desc": "",
+        "year": "2023",
+        "topics": []
+      }
+    ],
+    "experience": [
+      {
+        "company": "Unyleya Educacional",
+        "job": "Jovem Aprendiz",
+        "period": "2022 ─ 2024",
+        "desc": "",
+        "skills": []
+      }
+    ]
+  }
+}
