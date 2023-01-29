@@ -8,21 +8,21 @@
 
 .main__skill:hover,
 .main__skill:active {
-  animation: zoom-in-bg .3s forwards;
+  animation: zoom-in-bg 0.3s forwards;
 }
 
 .main__skill:not(:hover) {
-  animation: zoom-out-bg .3s forwards;
+  animation: zoom-out-bg 0.3s forwards;
 }
 
 .main__skill:first-child {
-  background-image: url('../assets/images/html5-brands.svg');
+  background-image: url("../public/images/html5-brands.svg");
 }
 
 .main__skill:nth-child(2) {
-  background-image: url('../assets/images/css3-brands.svg');
+  background-image: url("../public/images/css3-brands.svg");
 }
 
 .main__skill:nth-child(3) {
-  background-image: url('../assets/images/js-brands.svg');
+  background-image: url("../public/images/js-brands.svg");
 }

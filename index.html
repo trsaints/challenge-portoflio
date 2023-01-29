@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="./app/styles/main.css" />
     <link
       rel="stylesheet"
-      href="./app/assets/fontawesome/css/fontawesome.css"
+      href="./app/public/fontawesome/css/fontawesome.css"
     />
-    <link rel="stylesheet" href="./app/assets/fontawesome/css/brands.css" />
-    <link rel="stylesheet" href="./app/assets/fontawesome/css/solid.css" />
+    <link rel="stylesheet" href="./app/public/fontawesome/css/brands.css" />
+    <link rel="stylesheet" href="./app/public/fontawesome/css/solid.css" />
     <meta
       name="description"
       content="Thiago Rodrigues Santos, desenvolvedor Front-End ─ meu portoflio pessoal."
@@ -68,7 +68,7 @@
   <body>
     <header class="header wrapper">
       <div class="header__logo">
-        <img src="./app/assets/images/trsaints-logos_white.png" alt="" />
+        <img src="./app/public/images/trsaints-logos_white.png" alt="" />
       </div>
 
       <div class="header__menu">
@@ -122,7 +122,7 @@
         </div>
 
         <div class="main__hero__banner">
-          <img src="./app/assets/images/trsaints-logos_black.png" alt="" />
+          <img src="./app/public/images/trsaints-logos_black.png" alt="" />
         </div>
       </div>
 
@@ -180,7 +180,7 @@
           <li class="main__hobby">desenhar<i class="fa-solid fa-pen"></i></li>
           <li class="main__hobby">ler<i class="fa-solid fa-book"></i></li>
           <li class="main__hobby">
-            malhar<i class="fa-solid fa-dumbbell"></i>
+            treinar<i class="fa-solid fa-dumbbell"></i>
           </li>
           <li class="main__hobby">jogar<i class="fa-solid fa-gamepad"></i></li>
         </ul>
@@ -192,7 +192,7 @@
         <ul class="main__graduations__list wrapper">
           <li class="main__graduation">
             <img
-              src="./app/assets/images/senai-logo.svg"
+              src="./app/public/images/senai-logo.svg"
               alt=""
               class="main__graduation__banner"
             />
@@ -202,7 +202,7 @@
 
           <li class="main__graduation">
             <img
-              src="./app/assets/images/senai-logo.svg"
+              src="./app/public/images/senai-logo.svg"
               alt=""
               class="main__graduation__banner"
             />
@@ -212,7 +212,7 @@
 
           <li class="main__graduation">
             <img
-              src="./app/assets/images/alura-logo-dark.svg"
+              src="./app/public/images/alura-logo-dark.svg"
               alt=""
               class="main__graduation__banner"
             />
@@ -245,7 +245,7 @@
     <aside class="contact wrapper" id="contact" data-element="contact">
       <img
         class="contact__banner"
-        src="./app/assets/images/undraw_subscribe_vspl.svg"
+        src="./app/public/images/undraw_subscribe_vspl.svg"
         alt="ilustração: Mulher ao lado de um grande envelope. Sua pele é negra, ela veste calças e sapatos pretos, e um casaco azul. O envelope está aberto"
       />
 
@@ -321,7 +321,8 @@
     </footer>
 
     <button class="scroll__button" type="button" data-element="scroll-btn">
-      <i class="fa-solid fa-arrow-up"></i>Voltar ao topo
+      <i class="fa-solid fa-arrow-up"></i>
+      <span class="sr-only">Voltar ao topo</span>
     </button>
   </body>
   <script src="./app/src/index.js" type="module"></script>
