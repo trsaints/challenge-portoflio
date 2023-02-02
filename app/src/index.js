@@ -3,8 +3,9 @@ import { datasetController } from "./controllers/dataset_controller.js";
 import { projectController } from "./controllers/project_controller.js";
 import { scrollController } from "./controllers/scroll_controller.js";
 import { formController } from "./controllers/form_controller.js";
+import { configure, infosDB } from "./services/database_service.js";
 
-(() => {
+function startApp() {
   const menuBtn = document.querySelector("[data-element='menu']");
   const navlinks = document.querySelector("[data-element='nav-links']");
   const projectsBtn = document.querySelector("[data-element='projects-btn']");
@@ -24,9 +25,17 @@ import { formController } from "./controllers/form_controller.js";
 
   projectsBtn.addEventListener("click", projectController.renderProjects);
   scrollBtn.addEventListener("click", () => {
-    scrollController.scrollTo("#main")
+    scrollController.scrollTo("#main");
   });
 
   datasetController.setDataLink();
   formController.setRequiredFields();
+}
+
+(() => {
+  if (infosDB.checkPreload()) {
+    startApp();
+  } else {
+    configure().then((_success) => startApp());
+  }
 })();
