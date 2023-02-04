@@ -3,118 +3,146 @@
     "projects": [
       {
         "name": "Alura Geek",
-        "desc": "",
-        "technologies": [],
-        "repoURL": "",
-        "demoURL": "",
-        "banner": ""
+        "desc": "Challenge Front End II do programa Oracle Next Education ─ Turma 2",
+        "technologies": [
+          "HTML", "CSS", "JS"
+        ],
+        "repoURL": "https://github.com/trsaints/alura-geek",
+        "demoURL": "https://trsaints.github.io/alura-geek/",
+        "banner": "https://user-images.githubusercontent.com/90068572/205415217-01081c37-2651-47a4-a933-522ebdc4defc.png"
       },
       {
         "name": "Jogo da Forca",
-        "desc": "",
-        "technologies": [],
-        "repoURL": "",
-        "demoURL": "",
-        "banner": ""
+        "desc": "Sprint 02 da Trilha Iniciante do programa Oracle Next Education",
+        "technologies": [
+          "HTML", "CSS", "JS"
+        ],
+        "repoURL": "https://github.com/trsaints/challenge-gallow",
+        "demoURL": "https://trsaints.github.io/challenge-gallow/",
+        "banner": "https://user-images.githubusercontent.com/90068572/178883195-49d20ba7-db3d-4ff7-b280-3b58a3b4dea7.png"
       },
       {
         "name": "Visual Identity",
-        "desc": "",
-        "technologies": [],
-        "repoURL": "",
-        "demoURL": "",
-        "banner": ""
+        "desc": "Everyone has their own visual identity. What is yours?",
+        "technologies": [
+          "HTML", "CSS", "JS"
+        ],
+        "repoURL": "https://github.com/trsaints/visual-identity",
+        "demoURL": "https://trsaints.github.io/visual-identity",
+        "banner": "https://user-images.githubusercontent.com/90068572/216481336-3e8a1f12-6e9e-440c-a0ce-62d4a8a96a86.png"
       },
       {
         "name": "Press Start",
-        "desc": "",
-        "technologies": [],
-        "repoURL": "",
-        "demoURL": "",
-        "banner": ""
+        "desc": "Teste 01 do curso Desenvolvedor Mobile, ministrado no SENAI ─ DF Esta é uma página fake, simulando uma loja de jogos",
+        "technologies": [
+          "HTML", "CSS", "JS"
+        ],
+        "repoURL": "https://github.com/trsaints/press-start",
+        "demoURL": "https://trsaints.github.io/press-start/",
+        "banner": "https://user-images.githubusercontent.com/90068572/216482882-3d58d96e-a3c2-41af-946e-b7e65c140fff.png"
       },
       {
         "name": "Codificador de Texto",
-        "desc": "",
-        "technologies": [],
-        "repoURL": "",
-        "demoURL": "",
-        "banner": ""
+        "desc": "Challenge 1 do programa Oracle Next Education ─ Turma 2 Este é o primeiro desafio proposto pelo programa Oracle Next Education, uma parceria entre Oracle e Alura que promove educação gratuita para aqueles que desejam ingressar no mundo de Desenvolvimento Web.",
+        "technologies": [
+          "HTML", "CSS", "JS"
+        ],
+        "repoURL": "https://github.com/trsaints/challenge-encrypt",
+        "demoURL": "https://trsaints.github.io/challenge-encrypt",
+        "banner": "https://user-images.githubusercontent.com/90068572/170889572-66b55c2f-1b9a-46b3-ac83-7cfd92d07fe8.png"
       },
       {
         "name": "Easy Jobs",
-        "desc": "",
-        "technologies": [],
-        "repoURL": "",
-        "demoURL": "",
-        "banner": ""
+        "desc": "Projeto conceito feito para apresentação no programa Jovem Aprendiz pelo CIEE. Tema: Tecnologia e Trabalho",
+        "technologies": [
+          "HTML", "CSS", "JS"
+        ],
+        "repoURL": "https://github.com/trsaints/easy-jobs",
+        "demoURL": "https://trsaints.github.io/easy-jobs/",
+        "banner": "https://user-images.githubusercontent.com/90068572/216481645-915b1616-a91f-48d0-a67f-7b7089eb25e0.png"
       },
       {
         "name": "Portfolio",
-        "desc": "",
-        "technologies": [],
-        "repoURL": "",
-        "demoURL": "",
-        "banner": ""
+        "desc": "Este é um projeto desenvolvido com HTML, CSS e JavaScript, visando ser um portfolio de apresentação, contendo um resumo geral sobre mim como Dev.",
+        "technologies": [
+          "HTML", "CSS", "JS"
+        ],
+        "repoURL": "https://github.com/trsaints/challenge-portfolio",
+        "demoURL": "https://trsaints.github.io/challenge-portfolio/",
+        "banner": "https://user-images.githubusercontent.com/90068572/185764056-1aa741a9-b4ab-4303-9038-710f1c2f1e28.png"
       }
     ],
     "skills": [
       {
         "name": "HTML5",
-        "desc": "",
+        "desc": "É a linguagem de texto que estrutura a Web",
         "abbr": "Hypertext Markup Language"
       },
       {
         "name": "CSS3",
-        "desc": "",
+        "desc": "É a linguagem de estilos que dá cor a Web",
         "abbr": "Cascading Style Sheets"
       },
       {
         "name": "JS",
-        "desc": "",
+        "desc": "É a linguagem que dá vida a Web, e muito mais",
         "abbr": "JavaScript"
-      },
-      {
-        "name": "Excel",
-        "desc": "",
-        "abbr": ""
       }
     ],
     "hobbies": [
       {
-        "name": "Treinar"
+        "name": "Treinar",
+        "desc": "Gosto de me desafiar e me condicionar através do exercício"
       },
       {
-        "name": "Jogar"
+        "name": "Jogar",
+        "desc": "Um bom RPG sempre vem a calhar"
       },
       {
-        "name": "Desenhar"
+        "name": "Desenhar",
+        "desc": "Se programar não der certo, vou vender minha arte na praia. Rs"
       },
       {
-        "name": "Ler"
+        "name": "Ler",
+        "desc": "De Nárnia a linguagem corporal, um bom livro faz toda a diferença"
       }
     ],
     "degrees": [
       {
         "name": "Web Designer",
         "school": "SENAI",
-        "desc": "",
+        "desc": "Foi minha porta de entrada para o desenvolvimento Web.",
         "year": "2021",
-        "topics": []
+        "topics": [
+          "Web Design",
+          "Lógica de Programação"
+        ]
       },
       {
         "name": "Oracle Next Education",
         "school": "Alura",
-        "desc": "",
+        "desc": "O programa Oracle Next Education abriu caminho para um conhecimento mais aprofundado de como é ser um desenvolvedor Web, principalmente através de desafios, pensados para treinar as competências que todo programador precisa.",
         "year": "2022",
-        "topics": []
+        "topics": [
+          "Desenvolvimento Web",
+          "Lógica de Programação",
+          "Front-End",
+          "Back-End",
+          "Gerenciamento de Projetos",
+          "Produtividade"
+        ]
       },
       {
         "name": "Google IT Support",
         "school": "Coursera",
-        "desc": "",
+        "desc": "Este curso visa entregar os fundamentos base necessários para atuar como um profissional na área de suporte de TI, porém são conhecimentos essenciais para qualquer programador.",
         "year": "2023",
-        "topics": []
+        "topics": [
+          "Suporte Técnico",
+          "Administração de Sistemas",
+          "Administração de Redes",
+          "Tecnologia da Informação"
+        ]
       }
     ],
     "experience": [
@@ -122,8 +150,13 @@
         "company": "Unyleya Educacional",
         "job": "Jovem Aprendiz",
         "period": "2022 ─ 2024",
-        "desc": "",
-        "skills": []
+        "desc": "Minha porta de entrada para o mercado de trabalho. Aqui, atuo como auxiliar administrativo no setor de Contabilidade e Finanças, realizando lançamentos em um sistema de gestão de compras e arquivando pagamentos",
+        "skills": [
+          "Microsoft 365",
+          "Gerenciamento de Arquivos",
+          "Visual Basic for Applications",
+          "Tarefas Administrativas"
+        ]
       }
     ]
   }
