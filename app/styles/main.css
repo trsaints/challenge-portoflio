@@ -28,6 +28,11 @@
   --c-white--ls: hsl(260, 100%, 100%);
 }
 
+@font-face {
+  font-family: 'Red Hat Display';
+  src: url('../public/fonts/Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf');
+}
+
 * {
   font-family: inherit;
   margin: 0;
