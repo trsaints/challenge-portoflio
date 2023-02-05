@@ -1,4 +1,7 @@
 .contact {
+  display: grid;
+  grid-template-areas: "form";
+  grid-template-columns: 1fr;
   gap: 1rem;
 
   background-color: var(--c-white);
@@ -9,13 +12,9 @@
 }
 
 .contact__content {
+  grid-area: form;
   flex-direction: column;
   gap: 2rem;
-}
-
-.contact__banner,
-.contact__content {
-  width: 100%;
 }
 
 .contact__form {
@@ -26,18 +25,18 @@
 
 .contact__form__box {
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .contact__form__field {
   flex-direction: column;
   gap: 0.25rem;
 
-  padding: 0.5rem 0.75rem 0 0.75rem;
+  padding: 8px 12px 0 12px;
 
   background-color: var(--c-white--ls);
 
-  max-width: calc(100vw - 2.5rem);
+  max-width: calc(100vw - 32px);
 }
 
 .contact__form__field:is(:focus-within) .contact__form__label{
@@ -59,7 +58,7 @@
 }
 
 .contact__form__input {
-  border: 0.25rem solid transparent;
+  border: 4px solid transparent;
   transition: all 0.2s ease-in-out;
   font-weight: 300;
 }
@@ -74,7 +73,7 @@
 
   border: none;
 
-  padding: 1rem;
+  padding: 16px;
 
   align-self: flex-start;
 
@@ -94,17 +93,28 @@
   transform: scale(1.03);
 }
 
-@media screen and (min-width: 728px) {
+@media screen and (min-width: 768px) {
+  .contact {
+    grid-template-areas: "banner form";
+    grid-template-columns: 1fr 2fr;
+    max-height: max-content;
+  }
+
   .contact__banner {
+    grid-area: banner;
     display: inline-block;
-    max-width: 15rem;
+    max-width: 240px;
+    height: 100%;
     background-color: var(--c-white--l);
-    padding: 2rem;
+  }
+
+  .contact__content {
+    grid-area: form;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .contact__banner {
-    max-width: 30rem;
+    max-width: 480px;
   }
 }

@@ -10,13 +10,13 @@
 
 .main__projects__description {
   font-size: 1.25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 
 .main__projects__button {
-  padding: 1rem;
-  margin-bottom: 1rem;
+  padding: 16px;
+  margin-bottom: 16px;
   background-color: var(--c-black);
   color: var(--c-white--ls);
   border: none;
@@ -30,11 +30,11 @@
   background-color: var(--c-main);
   color: var(--c-black);
 
-  box-shadow: 0.25rem 0.25rem 0.125rem var(--c-gray);
+  box-shadow: 4px 4px 2px var(--c-gray);
 }
 
 .main__projects__button:focus {
-  outline: 0.125rem solid var(--c-black);
+  outline: 2px solid var(--c-black);
   transform: scale(1.03);
 }
 
@@ -50,10 +50,10 @@
   align-items: center;
   text-align: left;
   gap: 1rem;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   background-color: var(--c-white--ls);
 
-  box-shadow: 0.125rem 0.125rem 0.25rem var(--c-gray--ls);
+  box-shadow: 2px 2px 4px var(--c-gray--ls);
   width: 95vw;
 
   animation: vanish 0.3s forwards;
@@ -69,13 +69,12 @@
 .main__project__content {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: .5rem;
 
-  padding: 1rem;
+  padding: 16px;
 }
 
 .main__project__banner {
-  width: 100%;
   max-width: 95vw;
 }
 
@@ -98,7 +97,7 @@
 
 .main__project__button {
   flex: 1;
-  padding: 0.75rem 1rem;
+  padding: 12px 16px;
   font-weight: 500;
   font-size: 1rem;
 
@@ -112,25 +111,25 @@
 }
 
 .main__project__button:focus {
-  outline: 0.125rem solid var(--c-black);
+  outline: 2px solid var(--c-black);
 }
 
 .main__project__button:first-child {
   color: var(--c-main--d);
   background-color: var(--c-white--ls);
-  border: 0.125rem solid var(--c-main--d);
+  border: 2px solid var(--c-main--d);
 }
 
 .main__project__button:nth-child(2) {
   color: var(--c-white--ls);
   background-color: var(--c-main--d);
-  border: 0.125rem solid var(--c-main--d);
+  border: 2px solid var(--c-main--d);
 }
 
 .main__project__button:first-child:hover {
   color: var(--c-main--ds);
   background-color: var(--c-white--l);
-  border: 0.125rem solid var(--c-main--ds);
+  border: 2px solid var(--c-main--ds);
 }
 
 .main__project__button:nth-child(2):hover {
@@ -145,12 +144,9 @@
 }
 
 @media screen and (min-width: 768px) {
-  .main__project {
-    max-width: 44rem;
-  }
-
+  .main__project,
   .main__project__banner {
-    max-width: 44rem;
+    max-width: 704px;
   }
 
   .main__project__title {
@@ -164,14 +160,14 @@
 
 @media screen and (min-width: 1024px) {
   .main__project {
-    max-width: 64rem;
+    max-width: 1024px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
   
   .main__project__banner {
-    max-width: 35rem;
+    max-width: 560px;
   }
 
   .main__project:nth-of-type(2n) .main__project__banner {

@@ -12,7 +12,7 @@
 }
 
 .main__hero__banner {
-  max-width: 10rem;
+  max-width: 160px;
   border: 1px solid black;
   border-radius: 100%;
   order: 1;
@@ -37,7 +37,7 @@
   font-weight: 500;
   text-decoration: none;
 
-  border-bottom: .125rem solid var(--c-gray);
+  border-bottom: 2px solid var(--c-gray);
   transition: all 0.2s ease-in-out;
 }
 
@@ -57,7 +57,7 @@
   }
 
   .main__hero__banner {
-    max-width: 15rem;
+    max-width: 240px;
     order: 2;
   }
 

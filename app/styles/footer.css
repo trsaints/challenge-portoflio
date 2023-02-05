@@ -6,22 +6,21 @@
   place-items: center;
   text-align: center;
 
-  padding-block: 2rem;
+  padding-block: 32px;
 }
 
 .footer__title {
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 .footer__link {
   color: inherit;
 
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .footer__link:hover {
   text-decoration: none;
   color: var(--c-main);
 }
-
