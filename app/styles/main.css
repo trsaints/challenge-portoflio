@@ -20,7 +20,7 @@
   --c-gray--ls: hsl(255, 9%, 70%);
   --c-main--ls: hsl(196, 84%, 86%);
   --c-main--l: hsl(196, 84%, 70%);
-  --c-main: #31bbed;
+  --c-main: hsl(196, 84%, 56%);
   --c-main--d: hsl(196, 84%, 50%);
   --c-main--ds: hsl(196, 84%, 40%);
   --c-white: hsl(260, 48%, 90%);
@@ -38,6 +38,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 72px;
 }
 
 body {
@@ -80,11 +81,11 @@ h6 {
 }
 
 br {
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 i {
-  padding: 0.125rem;
+  padding: 2px;
 }
 
 a {
@@ -100,4 +101,22 @@ a {
   display: none;
 }
 
+@media screen and (min-width: 1024px) {
+  html {
+    scroll-padding-top: 80px;
+  }
+}
 
+::-webkit-scrollbar {
+  width: .5rem;
+  background-color: var(--c-white--l);
+}
+
+::-webkit-scrollbar-thumb {
+  width: .5rem;
+  background-color: var(--c-black--l);
+}
+
+::selection {
+  background-color: var(--c-main--ls);
+}

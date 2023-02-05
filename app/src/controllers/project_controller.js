@@ -1,4 +1,4 @@
-import { projectService } from "../services/projects_service.js";
+import { infosDB } from "../services/database_service.js";
 import { elementController } from "./element_controller.js";
 import { linkController } from "./link_controller.js";
 
@@ -6,10 +6,10 @@ function createProjectCard(project) {
   const projectCard = elementController.generateElement("div", "main__project");
   const projectBanner = createProjectBanner(project.banner);
   const projectContent = createProjectContent(
-    project.title,
-    project.description,
-    project.repository,
-    project.demo
+    project.name,
+    project.desc,
+    project.repoURL,
+    project.demoURL
   );
 
   projectCard.appendChild(projectBanner);
@@ -94,7 +94,7 @@ function createProjectButtons(repo, demo) {
 }
 
 function renderProjects() {
-  projectService.getProjects().then((projects) => {
+  infosDB.loadAll("projects").then((projects) => {
     generateProjects(projects);
   });
 }

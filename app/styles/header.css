@@ -1,7 +1,7 @@
 @import url(./animations.css);
 
 .header {
-  padding: 1.25rem 5rem;
+  padding: 23px 80px;
   background-color: var(--c-black);
   color: var(--c-white--ls);
 
@@ -12,7 +12,7 @@
 
   position: fixed;
   z-index: 1;
-  width: 100%;
+  width: 100vw;
 }
 
 .header__logo {
@@ -29,7 +29,7 @@
   background-color: transparent;
   color: inherit;
   border: none;
-  font-size: 120%;
+  font-size: 1.2rem;
 
   transition: all .2s ease-in-out;
 }
@@ -62,13 +62,13 @@
   gap: .75rem;
   text-align: center;
 
-  padding-top: 2.5rem;
+  padding-top: 40px;
 }
 
 .header__nav__link {
   display: inline-block;
-  border: 0.25rem solid transparent;
-  padding-block: 0.5rem;
+  border: 4px solid transparent;
+  padding-block: 8px;
   color: inherit;
   text-decoration: none;
   font-weight: 500;
@@ -94,12 +94,13 @@
 @media screen and (min-width: 1024px) {
   .header {
     flex-direction: row;
-    padding: 0 5rem;
+    padding: 0 80px;
+    width: calc(100vw - .5rem);
   }
 
   .header__logo {
     display: inline-block;
-    min-width: 5rem;
+    min-width: 80px;
     width: 5rem;
     border-radius: 100%;
   }
@@ -109,7 +110,7 @@
   }
 
   .header__nav {
-    height: 100%;
+    height: auto;
   }
 
   .header__nav__links {

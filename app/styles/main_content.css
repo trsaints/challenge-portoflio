@@ -5,7 +5,11 @@
 .main__graduations,
 .main__projects,
 .contact {
-  padding: 5rem 1rem 2.5rem 1rem;
+  padding: 24px 16px;
+}
+
+.main__hero {
+  padding-top: 72px;
 }
 
 .main__about__title,
@@ -16,13 +20,13 @@
 .contact__title {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
 }
 
 .main__skills__list,
 .main__hobbies__list,
 .main__graduations__list {
-  margin-top: 2rem;
+  margin-top: 32px;
   flex-wrap: wrap;
 }
 
@@ -35,9 +39,9 @@
 .main__hobby {
   font-weight: 700;
   flex: 1;
-  min-width: 10rem;
-  min-height: 10rem;
-  padding: 1rem;
+  min-width: 160px;
+  min-height: 160px;
+  padding: 16px;
 
   background-color: var(--c-white--ls);
   align-items: flex-end;
@@ -72,7 +76,11 @@
   .main__graduations,
   .main__projects,
   .contact {
-    padding: 6rem 2.5rem 2.5rem 2.5rem;
+    padding: 40px;
+  }
+
+  .main__hero {
+    padding-top: 80px;
   }
 
   .main__skills__list,
@@ -91,6 +99,10 @@
   .main__graduations,
   .main__projects,
   .contact {
-    padding: 6.5rem 5rem 2.5rem 5rem;
+    padding: 40px 80px;
+  }
+
+  .main__hero {
+    padding-top: 80px;
   }
 }

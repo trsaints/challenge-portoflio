@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="./app/styles/main.css" />
     <link
       rel="stylesheet"
-      href="./app/assets/fontawesome/css/fontawesome.css"
+      href="./app/public/fontawesome/css/fontawesome.css"
     />
-    <link rel="stylesheet" href="./app/assets/fontawesome/css/brands.css" />
-    <link rel="stylesheet" href="./app/assets/fontawesome/css/solid.css" />
+    <link rel="stylesheet" href="./app/public/fontawesome/css/brands.css" />
+    <link rel="stylesheet" href="./app/public/fontawesome/css/solid.css" />
     <meta
       name="description"
       content="Thiago Rodrigues Santos, desenvolvedor Front-End ─ meu portoflio pessoal."
@@ -63,25 +63,31 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
-    <title>Thiago Rodrigues</title>
+    <title>Thiago Rodrigues ─ Desenvolvedor Front-End</title>
   </head>
   <body>
     <header class="header wrapper">
       <div class="header__logo">
-        <img src="./app/assets/images/trsaints-logos_white.png" alt="" />
+        <img src="./app/public/images/trsaints-logos_white.png" alt="" />
       </div>
 
       <div class="header__menu">
         <button type="button" data-element="menu" class="header__menu__btn">
-          <i class="fa-solid fa-bars"></i> Menu
+          <i class="fa-solid fa-bars" aria-hidden="true"></i> Menu
         </button>
+
         <nav class="header__nav" data-element="navbar">
           <div class="header__nav__links wrapper" data-element="nav-links">
             <a href="#about" class="header__nav__link">sobre mim</a>
+
             <a href="#skills" class="header__nav__link">skills</a>
+
             <a href="#hobbies" class="header__nav__link">hobbies</a>
+
             <a href="#graduations" class="header__nav__link">formação</a>
+
             <a href="#projects" class="header__nav__link">projetos</a>
+
             <a href="#contact" class="header__nav__link">contato</a>
           </div>
         </nav>
@@ -105,24 +111,26 @@
           <nav class="main__hero__links wrapper">
             <a href="https://github.com/trsaints" class="main__hero__link">
               GitHub
-              <i class="fa-brands fa-github"></i>
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
             </a>
+
             <a
               href="https://www.linkedin.com/in/trsaints2003/"
               class="main__hero__link"
-              >LinkedIn <i class="fa-brands fa-linkedin"></i
+              >LinkedIn <i class="fa-brands fa-linkedin" aria-hidden="true"></i
             ></a>
+
             <a
               href="https://www.youtube.com/channel/UC2nx2A4nAL7piYG58Fi7xsg"
               class="main__hero__link"
               >YouTube
-              <i class="fa-brands fa-youtube"></i>
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
             </a>
           </nav>
         </div>
 
         <div class="main__hero__banner">
-          <img src="./app/assets/images/trsaints-logos_black.png" alt="" />
+          <img src="./app/public/images/trsaints-logos_black.png" alt="" />
         </div>
       </div>
 
@@ -152,17 +160,19 @@
             <span lang="en"
               ><abbr title="Hypertext Markup Language">HTML</abbr>5</span
             >
-            <i class="fa-brands fa-html5"></i>
+            <i class="fa-brands fa-html5" aria-hidden="true"></i>
           </li>
+
           <li class="main__skill">
             <span lang="en"
               ><abbr title="Cascading Style Sheets">CSS</abbr></span
             >
-            <i class="fa-brands fa-css3"></i>
+            <i class="fa-brands fa-css3" aria-hidden="true"></i>
           </li>
+
           <li class="main__skill">
             <span lang="en">JavaScript</span>
-            <i class="fa-brands fa-js"></i>
+            <i class="fa-brands fa-js" aria-hidden="true"></i>
           </li>
         </ul>
       </section>
@@ -177,12 +187,21 @@
         </p>
 
         <ul class="main__hobbies__list wrapper">
-          <li class="main__hobby">desenhar<i class="fa-solid fa-pen"></i></li>
-          <li class="main__hobby">ler<i class="fa-solid fa-book"></i></li>
           <li class="main__hobby">
-            malhar<i class="fa-solid fa-dumbbell"></i>
+            desenhar<i class="fa-solid fa-pen" aria-hidden="true"></i>
           </li>
-          <li class="main__hobby">jogar<i class="fa-solid fa-gamepad"></i></li>
+
+          <li class="main__hobby">
+            ler<i class="fa-solid fa-book" aria-hidden="true"></i>
+          </li>
+
+          <li class="main__hobby">
+            treinar<i class="fa-solid fa-dumbbell" aria-hidden="true"></i>
+          </li>
+
+          <li class="main__hobby">
+            jogar<i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+          </li>
         </ul>
       </section>
 
@@ -192,31 +211,37 @@
         <ul class="main__graduations__list wrapper">
           <li class="main__graduation">
             <img
-              src="./app/assets/images/senai-logo.svg"
+              src="./app/public/images/senai-logo.svg"
               alt=""
               class="main__graduation__banner"
             />
+
             <h3 class="main__graduation__title">Web Designer</h3>
+
             <p>2021 ─ SENAI</p>
           </li>
 
           <li class="main__graduation">
             <img
-              src="./app/assets/images/senai-logo.svg"
+              src="./app/public/images/senai-logo.svg"
               alt=""
               class="main__graduation__banner"
             />
+
             <h3 class="main__graduation__title">Desenvolvedor Mobile</h3>
+
             <p>2022 ─ SENAI</p>
           </li>
 
           <li class="main__graduation">
             <img
-              src="./app/assets/images/alura-logo-dark.svg"
+              src="./app/public/images/alura-logo-dark.svg"
               alt=""
               class="main__graduation__banner"
             />
+
             <h3 class="main__graduation__title">Oracle Next Education</h3>
+
             <p>2022 ─ Alura</p>
           </li>
         </ul>
@@ -242,10 +267,10 @@
       </section>
     </main>
 
-    <aside class="contact wrapper" id="contact" data-element="contact">
+    <aside class="contact" id="contact" data-element="contact">
       <img
         class="contact__banner"
-        src="./app/assets/images/undraw_subscribe_vspl.svg"
+        src="./app/public/images/undraw_subscribe_vspl.svg"
         alt="ilustração: Mulher ao lado de um grande envelope. Sua pele é negra, ela veste calças e sapatos pretos, e um casaco azul. O envelope está aberto"
       />
 
@@ -253,6 +278,7 @@
         <form class="contact__form" data-element="form">
           <fieldset class="contact__form__box wrapper">
             <legend class="contact__title">Contato</legend>
+
             <p class="contact__description">
               Quer me dizer alguma coisa?
               <br />
@@ -261,6 +287,7 @@
 
             <div class="contact__form__field wrapper" data-element="form-field">
               <label class="contact__form__label" for="form-name">Nome:</label>
+
               <input
                 type="text"
                 name="name"
@@ -268,10 +295,12 @@
                 id="form-name"
               />
             </div>
+
             <div class="contact__form__field wrapper" data-element="form-field">
               <label class="contact__form__label" for="form-email"
                 >Email:</label
               >
+
               <input
                 type="email"
                 name="email"
@@ -279,10 +308,12 @@
                 id="form-email"
               />
             </div>
+
             <div class="contact__form__field wrapper" data-element="form-field">
               <label class="contact__form__label" for="form-subject"
                 >Assunto:</label
               >
+
               <input
                 type="text"
                 name="subject"
@@ -290,10 +321,12 @@
                 id="form-subject"
               />
             </div>
+
             <div class="contact__form__field wrapper" data-element="form-field">
               <label class="contact__form__label" for="form-message"
                 >Mensagem:</label
               >
+
               <textarea
                 name="message"
                 class="contact__form__input"
@@ -313,6 +346,7 @@
 
     <footer class="footer" data-element="footer">
       <h3 class="footer__title">thiago rodrigues ─ desenvolvedor front-end</h3>
+
       <p class="footer__description">
         Feito por
         <a class="footer__link" href="https://github.com/trsaints">@trsaints</a>
@@ -321,8 +355,11 @@
     </footer>
 
     <button class="scroll__button" type="button" data-element="scroll-btn">
-      <i class="fa-solid fa-arrow-up"></i>Voltar ao topo
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+
+      <span class="sr-only">Voltar ao topo</span>
     </button>
   </body>
+
   <script src="./app/src/index.js" type="module"></script>
 </html>
