@@ -9,7 +9,7 @@
 }
 
 .main__hero {
-  padding-top: 72px;
+  padding-top: 88px;
 }
 
 .main__about__title,
@@ -80,7 +80,7 @@
   }
 
   .main__hero {
-    padding-top: 80px;
+    padding-top: 96px;
   }
 
   .main__skills__list,
@@ -103,6 +103,6 @@
   }
 
   .main__hero {
-    padding-top: 80px;
+    padding-top: 96px;
   }
 }
