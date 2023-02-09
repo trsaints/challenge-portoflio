@@ -1,6 +1,6 @@
+import { Icon } from "../components/Icon.js";
 import { infosDB } from "../services/database_service.js";
 import { elementController } from "./element_controller.js";
-import { linkController } from "./link_controller.js";
 
 function createProjectCard(project) {
   const projectCard = elementController.generateElement("div", "main__project");
@@ -68,35 +68,47 @@ function createProjectContent(title, desc, repo, demo) {
 }
 
 function createProjectButtons(repo, demo) {
-  const buttons = elementController.generateElement(
-    "div",
-    "main__project__buttons"
+  const options = elementController.generateElement(
+    "menu",
+    "main__project__options"
   );
-  const repoBtn = elementController.generateElement(
-    "button",
-    "main__project__button"
+  const repoAnchor = elementController.generateElement(
+    "a",
+    "main__project__link"
   );
-  const demoBtn = elementController.generateElement(
-    "button",
-    "main__project__button"
+  const demoAnchor = elementController.generateElement(
+    "a",
+    "main__project__link"
   );
 
-  repoBtn.textContent = "Repositório";
-  buttons.appendChild(repoBtn);
+  const srSpan = elementController.generateElement("span", "sr-only");
+  const spanText = document.createTextNode("Ver ");
+  srSpan.appendChild(spanText);
+  const linkIcon = new Icon("square-arrow-up-right");
 
-  demoBtn.textContent = "Ver Demo";
-  buttons.appendChild(demoBtn);
+  const repoText = document.createTextNode("Repositório");
+  const demoText = document.createTextNode("Demo");
 
-  linkController.openLink(repoBtn, repo);
-  linkController.openLink(demoBtn, demo);
+  repoAnchor.appendChild(srSpan);
+  demoAnchor.appendChild(srSpan.cloneNode());
+  repoAnchor.appendChild(repoText);
+  demoAnchor.appendChild(demoText);
+  repoAnchor.appendChild(linkIcon);
+  demoAnchor.appendChild(linkIcon.cloneNode());
 
-  return buttons;
+  repoAnchor.setAttribute("href", repo);
+  demoAnchor.setAttribute("href", demo);
+  repoAnchor.setAttribute("target", "_blank");
+  demoAnchor.setAttribute("target", "_blank");
+
+  options.appendChild(repoAnchor);
+  options.appendChild(demoAnchor);
+
+  return options;
 }
 
 function renderProjects() {
-  infosDB.loadAll("projects").then((projects) => {
-    generateProjects(projects);
-  });
+  infosDB.loadAll("projects").then((projects) => generateProjects(projects));
 }
 
 export const projectController = { renderProjects };
