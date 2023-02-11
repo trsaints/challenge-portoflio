@@ -55,10 +55,6 @@ body {
 
   background-color: var(--c-white--l);
   color: var(--c-black--l);
-
-  opacity: 0;
-
-  animation: vanish 0.5s forwards;
 }
 
 textarea {

@@ -4,7 +4,8 @@
 .main__hobbies,
 .main__graduations,
 .main__projects,
-.contact {
+.contact,
+.footer {
   padding: 24px 16px;
 }
 
@@ -26,8 +27,14 @@
 .main__skills__list,
 .main__hobbies__list,
 .main__graduations__list {
+  display: grid;
   margin-top: 32px;
   flex-wrap: wrap;
+}
+
+.main__skills__list,
+.main__hobbies__list {
+  grid-template-columns: repeat(auto-fit, minmax(min(163px, 100%), 1fr));
 }
 
 .main__skills__description,
@@ -60,7 +67,6 @@
 .main__hobbies__list,
 .main__graduations__list {
   gap: 1rem;
-  justify-content: flex-start;
 }
 
 .main__skill,
@@ -86,8 +92,11 @@
   .main__skills__list,
   .main__hobbies__list,
   .main__graduations__list {
-    gap: 1rem;
     justify-content: center;
+  }
+
+  .main__graduations__list {
+    grid-template-columns: repeat(auto-fit, minmax(min(224px, 100%), 1fr));
   }
 }
 

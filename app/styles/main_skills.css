@@ -8,11 +8,11 @@
 
 .main__skill:hover,
 .main__skill:active {
-  animation: zoom-in-bg 0.3s forwards;
+  background-size: 4rem; 
 }
 
 .main__skill:not(:hover) {
-  animation: zoom-out-bg 0.3s forwards;
+  background-size: 0;
 }
 
 .main__skill:first-child {
