@@ -19,8 +19,6 @@
   background-color: var(--c-black);
   color: var(--c-white--ls);
   border: none;
-
-  transition: all 0.2s ease-in-out;
 }
 
 .main__projects__button:hover,
@@ -56,8 +54,6 @@
   box-shadow: 4px 4px 4px var(--c-gray--ls);
   max-width: 100%;
 
-  transition: all 0.2s ease;
-
   overflow: hidden;
 }
 
@@ -92,8 +88,6 @@
   font-weight: 700;
 
   font-size: 1.25rem;
-
-  transition: all 0.2s ease-in-out;
 }
 
 .main__project__description {
@@ -115,8 +109,24 @@
   padding: 12px 16px;
   font-weight: 500;
   font-size: 1rem;
+}
 
-  transition: all 0.2s ease-in-out;
+@media screen and (prefers-reduced-motion: reduce) {
+  .main__projects__button,
+  .main__project,
+  .main__project__title,
+  .main__project__link {
+    transition: all 0.2s ease;
+  }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  .main__projects__button,
+  .main__project,
+  .main__project__title,
+  .main__project__link {
+    transition: all 0.2s ease-in-out;
+  }
 }
 
 .main__project__link:hover,

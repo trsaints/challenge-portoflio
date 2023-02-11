@@ -52,8 +52,20 @@
 
   background-color: var(--c-white--ls);
   align-items: flex-end;
+}
 
-  transition: all ease-in-out 0.2s;
+@media screen and (prefers-reduced-motion: reduce) {
+  .main__skill,
+  .main__hobby {
+    transition: all ease 0.2s;
+  }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  .main__skill,
+  .main__hobby {
+    transition: all ease-in-out 0.2s;
+  }
 }
 
 .main__skill:hover,

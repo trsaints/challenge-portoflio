@@ -1,4 +1,4 @@
-@keyframes vanish {
+@keyframes unvanish {
   from {
     opacity: 0;
   }
