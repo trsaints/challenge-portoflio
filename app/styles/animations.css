@@ -10,21 +10,21 @@
 
 @keyframes squash-menu {
   from {
-    height: 0;
+    height: 100vh;
   }
 
   to {
-    height: 100vh;
+    height: 0;
   }
 }
 
 @keyframes unsquash-menu {
   from {
-    height: 100vh;
+    height: 0;
   }
 
   to {
-    height: 0;
+    height: 100vh;
   }
 }
 
