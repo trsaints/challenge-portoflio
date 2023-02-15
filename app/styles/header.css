@@ -75,15 +75,19 @@
 
 @media screen and (prefers-reduced-motion: reduce) {
   .header__menu__btn,
-  .header__nav__link {
-    transition: all .2s ease;
+  .header__nav__link,
+  .header__nav.expanded,
+  .header__nav:not(.expanded) {
+    transition: all 0.2s ease;
   }
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
   .header__menu__btn,
-  .header__nav__link {
-    transition: all .2s ease-in-out;
+  .header__nav__link,
+  .header__nav.expanded,
+  .header__nav:not(.expanded) {
+    transition: all 0.2s ease-in-out;
   }
 }
 
