@@ -118,6 +118,10 @@
   .main__project__link {
     transition: all 0.2s ease;
   }
+
+  .main__project {
+    animation: unvanish 0.1s forwards;
+  }
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
@@ -126,6 +130,10 @@
   .main__project__title,
   .main__project__link {
     transition: all 0.2s ease-in-out;
+  }
+
+  .main__project {
+    animation: unvanish 0.2s forwards;
   }
 }
 
