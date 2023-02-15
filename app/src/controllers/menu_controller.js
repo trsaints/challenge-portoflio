@@ -14,6 +14,13 @@ function toggleMenu() {
   scrollBtn.classList.toggle("toggled");
 
   navbar.classList.toggle("expanded");
+
+  if (navbar.classList.contains("expanded")) return;
+
+  const { href } = window.location;
+  const hrefDelimiter = /#[a-zA-Z]+/;
+
+  if (hrefDelimiter.test(href)) scrollController.scrollTo(href)
 }
 
 function escapeMenu(key) {
