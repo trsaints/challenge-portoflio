@@ -24,9 +24,9 @@
 
 .main__hobby:hover,
 .main__hobby:active {
-  animation: slide-in-bg 0.3s forwards;
+  background-position: center center;
 }
 
 .main__hobby:not(:hover) {
-  animation: slide-out-bg 0.3s forwards;
+  background-position: center -200px;
 }

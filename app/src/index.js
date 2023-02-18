@@ -1,5 +1,4 @@
 import { menuController } from "./controllers/menu_controller.js";
-import { datasetController } from "./controllers/dataset_controller.js";
 import { projectController } from "./controllers/project_controller.js";
 import { scrollController } from "./controllers/scroll_controller.js";
 import { formController } from "./controllers/form_controller.js";
@@ -28,8 +27,9 @@ function startApp() {
     scrollController.scrollTo("#main");
   });
 
-  datasetController.setDataLink();
   formController.setRequiredFields();
+
+  navlinks.addEventListener("click", (evt) => menuController.observeNavigation(evt))
 }
 
 (() => {

@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./app/styles/reset.css" />
     <link rel="stylesheet" href="./app/styles/main.css" />
-    <link
-      rel="stylesheet"
-      href="./app/public/icons/css/fontawesome.css"
-    />
+    <link rel="stylesheet" href="./app/public/icons/css/fontawesome.css" />
     <link rel="stylesheet" href="./app/public/icons/css/brands.css" />
     <link rel="stylesheet" href="./app/public/icons/css/solid.css" />
     <meta
@@ -50,9 +47,24 @@
       sizes="192x192"
       href="./android-icon-192x192.png"
     />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="./favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
     <link rel="manifest" href="./manifest.webmanifest" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
@@ -61,9 +73,9 @@
   </head>
   <body>
     <header class="header wrapper">
-      <div class="header__logo">
+      <picture class="header__logo">
         <img src="./app/public/images/trsaints-logos_white.png" alt="" />
-      </div>
+      </picture>
 
       <div class="header__menu">
         <button type="button" data-element="menu" class="header__menu__btn">
@@ -72,17 +84,17 @@
 
         <nav class="header__nav" data-element="navbar">
           <div class="header__nav__links wrapper" data-element="nav-links">
-            <a href="#about" class="header__nav__link">sobre mim</a>
+            <a data-link="navbar" href="#about" class="header__nav__link">sobre mim</a>
 
-            <a href="#skills" class="header__nav__link">skills</a>
+            <a data-link="navbar" href="#skills" class="header__nav__link">skills</a>
 
-            <a href="#hobbies" class="header__nav__link">hobbies</a>
+            <a data-link="navbar" href="#hobbies" class="header__nav__link">hobbies</a>
 
-            <a href="#graduations" class="header__nav__link">formação</a>
+            <a data-link="navbar" href="#graduations" class="header__nav__link">formação</a>
 
-            <a href="#projects" class="header__nav__link">projetos</a>
+            <a data-link="navbar" href="#projects" class="header__nav__link">projetos</a>
 
-            <a href="#contact" class="header__nav__link">contato</a>
+            <a data-link="navbar" href="#contact" class="header__nav__link">contato</a>
           </div>
         </nav>
       </div>
@@ -90,16 +102,14 @@
 
     <main class="main" data-element="main" id="main">
       <div class="main__hero wrapper">
-        <div class="main__hero__box wrapper">
+        <section class="main__hero__box wrapper">
           <h1 class="main__hero__title">
             Olá, meu nome é <span lang="pt-br">Thiago</span> e construo páginas
-            web.
+            Web.
           </h1>
 
           <p class="main__hero__description">
-            Estudo desenvolvimento Web, atualmente focado em
-            <span lang="en">Front-End</span> para construir aplicações
-            sofisticadas, elegantes e acessíveis.
+            Eu desenvolvo interfaces através de código.
           </p>
 
           <nav class="main__hero__links wrapper">
@@ -121,35 +131,33 @@
               <i class="fa-brands fa-youtube" aria-hidden="true"></i>
             </a>
           </nav>
-        </div>
+        </section>
 
-        <div class="main__hero__banner">
+        <picture class="main__hero__banner">
           <img src="./app/public/images/trsaints-logos_black.png" alt="" />
-        </div>
+        </picture>
       </div>
 
       <section class="main__about" id="about">
-        <h2 class="main__about__title">sobre mim</h2>
+        <h2 class="main__about__title">sobre mim <i class="fa-solid fa-circle-info"></i></h2>
 
-        <div class="main__about__content wrapper">
-          <p class="main__about__description">
-            Nascido no Estado de <span lang="pt-br">Goiás</span>, viso me
-            especializar no mundo da programação, principalmente para o
-            desenvolvimento de interfaces de aplicações para a Web.
-          </p>
-        </div>
+        <p class="main__about__description">
+          Desde criança gosto de computadores e de arte. Na Web, consigo
+          misturar os dois, através das tecnologias do
+          <span lang="en">Front-End</span>
+        </p>
       </section>
 
       <section class="main__skills" id="skills">
         <h2 class="main__skills__title txt-center">
-          minhas <span lang="en">skills</span>
+          minhas <span lang="en">skills</span><i class="fa-solid fa-chart-pie"></i>
         </h2>
 
         <p class="main__skills__description">
-          As tecnologias que estou estudando ou já tenho domínio no momento.
+          Estas são as tecnologias com que estou trabalhando no momento:
         </p>
 
-        <ul class="main__skills__list wrapper">
+        <ul class="main__skills__list">
           <li class="main__skill">
             <span lang="en"
               ><abbr title="Hypertext Markup Language">HTML</abbr>5</span
@@ -173,14 +181,14 @@
 
       <section class="main__hobbies" id="hobbies">
         <h2 class="main__hobbies__title txt-center">
-          meus <span lang="en">hobbies</span>
+          meus <span lang="en">hobbies</span><i class="fa-solid fa-dice-d20"></i>
         </h2>
 
         <p class="main__hobbies__description">
           Afinal, nem só de código viverá o programador (nem de café).
         </p>
 
-        <ul class="main__hobbies__list wrapper">
+        <ul class="main__hobbies__list">
           <li class="main__hobby">
             desenhar<i class="fa-solid fa-pen" aria-hidden="true"></i>
           </li>
@@ -200,9 +208,9 @@
       </section>
 
       <section class="main__graduations" id="graduations">
-        <h2 class="main__graduations__title txt-center">minhas formações</h2>
+        <h2 class="main__graduations__title txt-center">minhas formações <i class="fa-solid fa-graduation-cap"></i></h2>
 
-        <ul class="main__graduations__list wrapper">
+        <ul class="main__graduations__list">
           <li class="main__graduation">
             <img
               src="./app/public/images/senai-logo.svg"
@@ -242,7 +250,7 @@
       </section>
 
       <section class="main__projects" id="projects">
-        <h2 class="main__projects__title txt-center">meu trabalho</h2>
+        <h2 class="main__projects__title txt-center">meu trabalho <i class="fa-solid fa-laptop-code"></i></h2>
 
         <p class="main__projects__description">
           Já tivemos o bastante de apresentações por aqui. Que tal dar uma
@@ -255,6 +263,7 @@
           data-element="projects-btn"
         >
           mostre-me
+          <i class="fa-solid fa-folder-open" aria-hidden="true"></i>
         </button>
 
         <div class="main__projects__list" data-element="projects-list"></div>
@@ -268,74 +277,71 @@
         alt="ilustração: Mulher ao lado de um grande envelope. Sua pele é negra, ela veste calças e sapatos pretos, e um casaco azul. O envelope está aberto"
       />
 
-      <div class="contact__content wrapper">
-        <form class="contact__form" data-element="form">
-          <fieldset class="contact__form__box wrapper">
-            <legend class="contact__title">Contato</legend>
+      <form class="contact__form" data-element="form">
+        <fieldset class="contact__form__box wrapper">
+          <legend class="contact__title">Contato <i class="fa-solid fa-user-plus"></i></legend>
 
-            <p class="contact__description">
-              Quer me dizer alguma coisa?
-              <br />
-              Preencha o formulário e em breve entrarei em contato.
-            </p>
+          <p class="contact__description">
+            Quer me dizer alguma coisa?
+            <br />
+            Preencha o formulário e em breve entrarei em contato.
+          </p>
 
-            <div class="contact__form__field wrapper" data-element="form-field">
-              <label class="contact__form__label" for="form-name">Nome:</label>
+          <div class="contact__form__field wrapper" data-element="form-field">
+            <label class="contact__form__label" for="form-name">Nome:</label>
 
-              <input
-                type="text"
-                name="name"
-                class="contact__form__input"
-                id="form-name"
-              />
-            </div>
+            <input
+              type="text"
+              name="name"
+              class="contact__form__input"
+              id="form-name"
+            />
+          </div>
 
-            <div class="contact__form__field wrapper" data-element="form-field">
-              <label class="contact__form__label" for="form-email"
-                >Email:</label
-              >
+          <div class="contact__form__field wrapper" data-element="form-field">
+            <label class="contact__form__label" for="form-email">Email:</label>
 
-              <input
-                type="email"
-                name="email"
-                class="contact__form__input"
-                id="form-email"
-              />
-            </div>
+            <input
+              type="email"
+              name="email"
+              class="contact__form__input"
+              id="form-email"
+            />
+          </div>
 
-            <div class="contact__form__field wrapper" data-element="form-field">
-              <label class="contact__form__label" for="form-subject"
-                >Assunto:</label
-              >
+          <div class="contact__form__field wrapper" data-element="form-field">
+            <label class="contact__form__label" for="form-subject"
+              >Assunto:</label
+            >
 
-              <input
-                type="text"
-                name="subject"
-                class="contact__form__input"
-                id="form-subject"
-              />
-            </div>
+            <input
+              type="text"
+              name="subject"
+              class="contact__form__input"
+              id="form-subject"
+            />
+          </div>
 
-            <div class="contact__form__field wrapper" data-element="form-field">
-              <label class="contact__form__label" for="form-message"
-                >Mensagem:</label
-              >
+          <div class="contact__form__field wrapper" data-element="form-field">
+            <label class="contact__form__label" for="form-message"
+              >Mensagem:</label
+            >
 
-              <textarea
-                name="message"
-                class="contact__form__input"
-                id="form-message"
-                cols="30"
-                rows="10"
-              ></textarea>
-            </div>
+            <textarea
+              name="message"
+              class="contact__form__input"
+              id="form-message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
 
-            <button type="submit" class="contact__form__button" readonly>
-              entrar em contato
-            </button>
-          </fieldset>
-        </form>
-      </div>
+          <button type="submit" class="contact__form__button" disabled>
+            entrar em contato
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          </button>
+        </fieldset>
+      </form>
     </aside>
 
     <footer class="footer" data-element="footer">
@@ -353,7 +359,7 @@
 
       <span class="sr-only">Voltar ao topo</span>
     </button>
-  </body>
 
-  <script src="./app/src/index.js" type="module"></script>
+    <script src="./app/src/index.js" type="module"></script>
+  </body>
 </html>

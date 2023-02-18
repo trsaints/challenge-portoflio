@@ -4,12 +4,13 @@
 .main__hobbies,
 .main__graduations,
 .main__projects,
-.contact {
+.contact,
+.footer {
   padding: 24px 16px;
 }
 
 .main__hero {
-  padding-top: 72px;
+  padding-top: 88px;
 }
 
 .main__about__title,
@@ -26,8 +27,14 @@
 .main__skills__list,
 .main__hobbies__list,
 .main__graduations__list {
+  display: grid;
   margin-top: 32px;
   flex-wrap: wrap;
+}
+
+.main__skills__list,
+.main__hobbies__list {
+  grid-template-columns: repeat(auto-fit, minmax(min(163px, 100%), 1fr));
 }
 
 .main__skills__description,
@@ -46,7 +53,26 @@
   background-color: var(--c-white--ls);
   align-items: flex-end;
 
-  transition: all ease-in-out 0.2s;
+  border-bottom: 4px solid var(--c-black);
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .main__skill,
+  .main__hobby {
+    transition: all ease 0.2s;
+  }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  .main__skill,
+  .main__hobby {
+    transition: all ease-in-out 0.2s;
+  }
+}
+
+.main__skill:hover,
+.main__hobby:hover {
+  border-bottom-color: var(--c-main);
 }
 
 .main__skill:hover,
@@ -60,7 +86,6 @@
 .main__hobbies__list,
 .main__graduations__list {
   gap: 1rem;
-  justify-content: flex-start;
 }
 
 .main__skill,
@@ -80,14 +105,17 @@
   }
 
   .main__hero {
-    padding-top: 80px;
+    padding-top: 96px;
   }
 
   .main__skills__list,
   .main__hobbies__list,
   .main__graduations__list {
-    gap: 1rem;
     justify-content: center;
+  }
+
+  .main__graduations__list {
+    grid-template-columns: repeat(auto-fit, minmax(min(224px, 100%), 1fr));
   }
 }
 
@@ -103,6 +131,6 @@
   }
 
   .main__hero {
-    padding-top: 80px;
+    padding-top: 96px;
   }
 }

@@ -6,7 +6,7 @@
   place-items: center;
   text-align: center;
 
-  padding-block: 32px;
+  padding-block: 48px;
 }
 
 .footer__title {
@@ -16,8 +16,18 @@
 
 .footer__link {
   color: inherit;
+}
 
-  transition: all 0.2s ease-in-out;
+@media screen and (prefers-reduced-motion: reduce) {
+  .footer__link {
+    transition: all 0.2s ease;
+  }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  .footer__link {
+    transition: all 0.2s ease-in-out;
+  }
 }
 
 .footer__link:hover {

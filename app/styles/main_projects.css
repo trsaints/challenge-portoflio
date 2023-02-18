@@ -13,15 +13,12 @@
   margin-bottom: 16px;
 }
 
-
 .main__projects__button {
   padding: 16px;
   margin-bottom: 16px;
   background-color: var(--c-black);
   color: var(--c-white--ls);
   border: none;
-
-  transition: all 0.2s ease-in-out;
 }
 
 .main__projects__button:hover,
@@ -42,23 +39,27 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  margin-top: 48px;
 }
 
 .main__project {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: left;
+  display: grid;
+  grid-template-areas: "banner" "detail";
+  grid-template-rows: 1fr 1fr;
+  height: max-content;
+
   gap: 1rem;
-  border-radius: 4px;
   background-color: var(--c-white--ls);
 
-  box-shadow: 2px 2px 4px var(--c-gray--ls);
-  width: 95vw;
-
-  animation: vanish 0.3s forwards;
+  box-shadow: 4px 4px 4px var(--c-gray--ls);
+  max-width: 100%;
 
   overflow: hidden;
+}
+
+.main__project:hover,
+.main__project:focus-within {
+  box-shadow: none;
 }
 
 .main__project:hover .main__project__title,
@@ -66,22 +67,27 @@
   color: var(--c-main--ds);
 }
 
-.main__project__content {
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-
-  padding: 16px;
+.main__project__banner {
+  grid-area: banner;
+  height: 100%;
+  object-fit: cover;
 }
 
-.main__project__banner {
-  max-width: 95vw;
+.main__project__content {
+  grid-area: detail;
+  align-self: flex-end;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  padding: 16px;
 }
 
 .main__project__title {
   font-weight: 700;
 
-  transition: all 0.3s ease-in-out;
+  font-size: 1.25rem;
 }
 
 .main__project__description {
@@ -89,68 +95,98 @@
   font-size: 0.875rem;
 }
 
-.main__project__buttons {
+.main__project__options {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.main__project__button {
+.main__project__link {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
   flex: 1;
   padding: 12px 16px;
   font-weight: 500;
   font-size: 1rem;
-
-  transition: all 0.2s ease-in-out;
 }
 
-.main__project__button:hover,
-.main__project__button:active,
-.main__project__button:focus {
+@media screen and (prefers-reduced-motion: reduce) {
+  .main__projects__button,
+  .main__project,
+  .main__project__title,
+  .main__project__link {
+    transition: all 0.2s ease;
+  }
+
+  .main__project {
+    animation: unvanish 0.1s forwards;
+  }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  .main__projects__button,
+  .main__project,
+  .main__project__title,
+  .main__project__link {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .main__project {
+    animation: unvanish 0.2s forwards;
+  }
+}
+
+.main__project__link:hover,
+.main__project__link:active,
+.main__project__link:focus {
   transform: scale(1.03);
 }
 
-.main__project__button:focus {
+.main__project__link:focus {
   outline: 2px solid var(--c-black);
 }
 
-.main__project__button:first-child {
+.main__project__link:first-child {
   color: var(--c-main--d);
   background-color: var(--c-white--ls);
   border: 2px solid var(--c-main--d);
 }
 
-.main__project__button:nth-child(2) {
+.main__project__link:nth-child(2) {
   color: var(--c-white--ls);
   background-color: var(--c-main--d);
   border: 2px solid var(--c-main--d);
 }
 
-.main__project__button:first-child:hover {
+.main__project__link:first-child:hover {
   color: var(--c-main--ds);
   background-color: var(--c-white--l);
   border: 2px solid var(--c-main--ds);
 }
 
-.main__project__button:nth-child(2):hover {
+.main__project__link:nth-child(2):hover {
   background-color: var(--c-main--ds);
   border-color: var(--c-main--ds);
 }
 
 @media screen and (min-width: 512px) {
-  .main__project__buttons {
+  .main__project__options {
     flex-direction: row;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .main__project,
+  .main__project {
+    height: 20rem;
+  }
+
   .main__project__banner {
-    max-width: 704px;
+    width: 100%;
   }
 
   .main__project__title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .main__project__description {
@@ -160,21 +196,22 @@
 
 @media screen and (min-width: 1024px) {
   .main__project {
-    max-width: 1024px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .main__project__banner {
-    max-width: 560px;
+    grid-template-rows: 1fr;
   }
 
-  .main__project:nth-of-type(2n) .main__project__banner {
-    order: 2;
+  .main__project:nth-child(even) {
+    grid-template-areas: "banner detail";
+    grid-template-columns: 4fr 5fr;
+    text-align: left;
   }
 
-  .main__project:nth-of-type(2n) .main__project__content {
-    order: 1;
+  .main__project:nth-child(odd) {
+    grid-template-areas: "detail banner";
+    grid-template-columns: 5fr 4fr;
+    text-align: right;
+  }
+
+  .main__project__content {
+    align-self: center;
   }
 }
