@@ -20,7 +20,7 @@ function toggleMenu() {
   const { href } = window.location;
   const hrefDelimiter = /#[a-zA-Z]+/;
 
-  if (hrefDelimiter.test(href)) scrollController.scrollTo(href)
+  if (hrefDelimiter.test(href)) scrollController.scrollTo(href);
 }
 
 function escapeMenu(key) {
@@ -47,4 +47,27 @@ function exitMenu(target) {
   scrollController.scrollTo(linkURL);
 }
 
-export const menuController = { toggleMenu, escapeMenu, exitMenu };
+function observeNavigation(evt) {
+  const { target } = evt;
+
+  const navLinks = document.querySelectorAll("[data-link='navbar']");
+
+  if (target.dataset.link === "navbar") {
+    navLinks.forEach((navlink) => {
+      const hasToBeChanged = navlink !== target && navlink.classList.contains("active")
+
+      if (hasToBeChanged) navlink.classList.remove("active");
+    });
+
+    if (target.classList.contains("active")) return;
+
+    target.classList.add("active");
+  }
+}
+
+export const menuController = {
+  toggleMenu,
+  escapeMenu,
+  exitMenu,
+  observeNavigation,
+};

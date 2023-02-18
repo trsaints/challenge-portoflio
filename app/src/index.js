@@ -28,6 +28,8 @@ function startApp() {
   });
 
   formController.setRequiredFields();
+
+  navlinks.addEventListener("click", (evt) => menuController.observeNavigation(evt))
 }
 
 (() => {
