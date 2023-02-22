@@ -1,4 +1,4 @@
-import { generateElement } from "../controllers/dom_controller.js";
+import { generateElement } from "../views/dom_view.js";
 
 export class Icon {
   constructor(name) {

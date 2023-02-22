@@ -1,4 +1,4 @@
-import { scrollTo } from "./scroll_controller.js";
+import { scrollTo } from "./scroll_view.js";
 
 const navlinks = document.querySelector("[data-element='nav-links']");
 const navbar = document.querySelector("[data-element='navbar']");

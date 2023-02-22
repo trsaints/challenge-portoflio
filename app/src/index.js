@@ -3,9 +3,9 @@ import {
   exitMenu,
   observeNavigation,
   toggleMenu,
-} from "./controllers/menu_controller.js";
-import { renderProjects } from "./controllers/project_controller.js";
-import { setRequiredFields } from "./controllers/form_controller.js";
+} from "./views/menu_view.js";
+import { renderProjects } from "./views/project_view.js";
+import { setRequiredFields } from "./views/form_view.js";
 import { configure, infosDB } from "./services/database_service.js";
 
 function initialize() {

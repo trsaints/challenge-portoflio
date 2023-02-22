@@ -1,4 +1,4 @@
-import { generateElement } from "../controllers/dom_controller.js";
+import { generateElement } from "../views/dom_view.js";
 import { Icon } from "./Icon.js";
 
 export default class Card {
@@ -47,7 +47,7 @@ export default class Card {
     const srSpan = generateElement("span", "sr-only");
     const spanText = document.createTextNode("Ver ");
     srSpan.appendChild(spanText);
-    
+
     const linkIcon = new Icon("square-arrow-up-right");
 
     const repoText = document.createTextNode("Repositório");

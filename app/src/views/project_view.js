@@ -1,5 +1,5 @@
 import { infosDB } from "../services/database_service.js";
-import { clearContent } from "./dom_controller.js";
+import { clearContent } from "./dom_view.js";
 import Card from "../components/Card.js";
 
 function generateProjects(projects) {
