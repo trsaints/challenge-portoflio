@@ -1,41 +1,33 @@
-import { menuController } from "./controllers/menu_controller.js";
-import { projectController } from "./controllers/project_controller.js";
-import { scrollController } from "./controllers/scroll_controller.js";
-import { formController } from "./controllers/form_controller.js";
+import {
+  escapeMenu,
+  exitMenu,
+  observeNavigation,
+  toggleMenu,
+} from "./controllers/menu_controller.js";
+import { renderProjects } from "./controllers/project_controller.js";
+import { setRequiredFields } from "./controllers/form_controller.js";
 import { configure, infosDB } from "./services/database_service.js";
 
-function startApp() {
+function initialize() {
   const menuBtn = document.querySelector("[data-element='menu']");
   const navlinks = document.querySelector("[data-element='nav-links']");
   const projectsBtn = document.querySelector("[data-element='projects-btn']");
-  const scrollBtn = document.querySelector("[data-element='scroll-btn']");
+  const form = document.querySelector("[data-element='form']");
 
-  menuBtn.addEventListener("click", () => {
-    menuController.toggleMenu();
-  });
+  menuBtn.addEventListener("click", toggleMenu);
 
-  document.addEventListener("keydown", (evt) => {
-    menuController.escapeMenu(evt.key);
-  });
+  document.addEventListener("keydown", escapeMenu);
 
-  navlinks.addEventListener("click", (evt) => {
-    menuController.exitMenu(evt.target);
-  });
+  navlinks.addEventListener("click", exitMenu);
+  navlinks.addEventListener("click", observeNavigation);
 
-  projectsBtn.addEventListener("click", projectController.renderProjects);
-  scrollBtn.addEventListener("click", () => {
-    scrollController.scrollTo("#main");
-  });
+  projectsBtn.addEventListener("click", renderProjects);
 
-  formController.setRequiredFields();
-
-  navlinks.addEventListener("click", (evt) => menuController.observeNavigation(evt))
+  setRequiredFields(form, "[data-element='form-field']");
 }
 
-(() => {
-  if (infosDB.checkPreload()) {
-    startApp();
-  } else {
-    configure().then((_success) => startApp());
-  }
-})();
+if (infosDB.checkPreload()) {
+  initialize();
+} else {
+  configure().then((_success) => initialize());
+}

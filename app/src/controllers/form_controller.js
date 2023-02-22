@@ -1,19 +1,16 @@
-function setRequiredFields() {
-  const formFields = document.querySelectorAll("[data-element='form-field']");
+export function setRequiredFields(form, target) {
+  const formFields = form.querySelectorAll(target);
 
   formFields.forEach((field) => {
-    if (
+    const hasContent =
       field.querySelector("input") !== null ||
-      field.querySelector("textarea") !== null
-    ) {
-      let formElement =
+      field.querySelector("textarea") !== null;
+
+    if (hasContent) {
+      let input =
         field.querySelector("input") || field.querySelector("textarea");
 
-      formElement.setAttribute("required", "");
+      input.setAttribute("required", "");
     }
   });
 }
-
-export const formController = {
-  setRequiredFields,
-};

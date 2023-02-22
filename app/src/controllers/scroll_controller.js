@@ -1,7 +1,6 @@
-function scrollTo(section) {
-  window.location.href = section;
+export function scrollTo(section = "") {
+  if (section) window.location.href = section;
+  else {
+    window.location.href = "#main";
+  }
 }
-
-export const scrollController = {
-  scrollTo,
-};
