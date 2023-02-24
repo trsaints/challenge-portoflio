@@ -1,19 +1,11 @@
-import { infosDB } from "../services/database_service.js";
-import { clearContent } from "./dom_view.js";
-import Card from "../components/Card.js";
-
-function generateProjects(projects) {
+export function generateProjects({projects, callbacks, Component}) {
   const projectsWrapper = document.querySelector(
     "[data-element='projects-list']"
   );
 
-  clearContent(projectsWrapper);
+  callbacks.clearContent(projectsWrapper);
 
   projects.forEach((project) =>
-    setTimeout(() => projectsWrapper.appendChild(new Card(project)), 200)
+    setTimeout(() => projectsWrapper.appendChild(new Component(project)), 100)
   );
-}
-
-export function renderProjects() {
-  infosDB.loadAll("projects").then((projects) => generateProjects(projects));
 }

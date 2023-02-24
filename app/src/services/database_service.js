@@ -15,7 +15,7 @@ export const infosDB = new LocalDB({
   objectStores: ["degrees", "experience", "hobbies", "projects", "skills"],
 });
 
-export async function configure() {
+export async function configureDB() {
   const options = {
     flow: {
       keyPath: "id",

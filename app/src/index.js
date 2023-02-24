@@ -4,30 +4,31 @@ import {
   observeNavigation,
   toggleMenu,
 } from "./views/menu_view.js";
-import { renderProjects } from "./views/project_view.js";
-import { setRequiredFields } from "./views/form_view.js";
-import { configure, infosDB } from "./services/database_service.js";
+import { generateProjects } from "./views/project_view.js";
+import { configureDB, infosDB } from "./services/database_service.js";
+import { clearContent } from "./views/dom_view.js";
+import { initialize } from "./controller/controller.js";
+import Card from "./components/Card.js";
 
-function initialize() {
-  const menuBtn = document.querySelector("[data-element='menu']");
-  const navlinks = document.querySelector("[data-element='nav-links']");
-  const projectsBtn = document.querySelector("[data-element='projects-btn']");
-  const form = document.querySelector("[data-element='form']");
+if (!infosDB.checkPreload()) {
+  try {
+    await configureDB()
+  } catch (error) {
+    console.error(error)
+  }
+};
 
-  menuBtn.addEventListener("click", toggleMenu);
+const dependencies = {
+  projects: await infosDB.loadAll("projects"),
+  callbacks: {
+    clearContent,
+    toggleMenu,
+    escapeMenu,
+    exitMenu,
+    observeNavigation,
+    generateProjects,
+  },
+  Component: Card,
+};
 
-  document.addEventListener("keydown", escapeMenu);
-
-  navlinks.addEventListener("click", exitMenu);
-  navlinks.addEventListener("click", observeNavigation);
-
-  projectsBtn.addEventListener("click", renderProjects);
-
-  setRequiredFields(form, "[data-element='form-field']");
-}
-
-if (infosDB.checkPreload()) {
-  initialize();
-} else {
-  configure().then((_success) => initialize());
-}
+initialize(dependencies)
