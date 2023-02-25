@@ -1,41 +1,34 @@
-import { menuController } from "./controllers/menu_controller.js";
-import { projectController } from "./controllers/project_controller.js";
-import { scrollController } from "./controllers/scroll_controller.js";
-import { formController } from "./controllers/form_controller.js";
-import { configure, infosDB } from "./services/database_service.js";
+import {
+  escapeMenu,
+  exitMenu,
+  observeNavigation,
+  toggleMenu,
+} from "./views/menu_view.js";
+import { generateProjects } from "./views/project_view.js";
+import { configureDB, infosDB } from "./services/database_service.js";
+import { clearContent } from "./views/dom_view.js";
+import { initialize } from "./controller/controller.js";
+import Card from "./components/Card.js";
 
-function startApp() {
-  const menuBtn = document.querySelector("[data-element='menu']");
-  const navlinks = document.querySelector("[data-element='nav-links']");
-  const projectsBtn = document.querySelector("[data-element='projects-btn']");
-  const scrollBtn = document.querySelector("[data-element='scroll-btn']");
-
-  menuBtn.addEventListener("click", () => {
-    menuController.toggleMenu();
-  });
-
-  document.addEventListener("keydown", (evt) => {
-    menuController.escapeMenu(evt.key);
-  });
-
-  navlinks.addEventListener("click", (evt) => {
-    menuController.exitMenu(evt.target);
-  });
-
-  projectsBtn.addEventListener("click", projectController.renderProjects);
-  scrollBtn.addEventListener("click", () => {
-    scrollController.scrollTo("#main");
-  });
-
-  formController.setRequiredFields();
-
-  navlinks.addEventListener("click", (evt) => menuController.observeNavigation(evt))
-}
-
-(() => {
-  if (infosDB.checkPreload()) {
-    startApp();
-  } else {
-    configure().then((_success) => startApp());
+if (!infosDB.checkPreload()) {
+  try {
+    await configureDB()
+  } catch (error) {
+    console.error(error)
   }
-})();
+};
+
+const dependencies = {
+  projects: await infosDB.loadAll("projects"),
+  callbacks: {
+    clearContent,
+    toggleMenu,
+    escapeMenu,
+    exitMenu,
+    observeNavigation,
+    generateProjects,
+  },
+  Component: Card,
+};
+
+initialize(dependencies)

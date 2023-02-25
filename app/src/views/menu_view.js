@@ -1,4 +1,4 @@
-import { scrollController } from "./scroll_controller.js";
+import { scrollTo } from "./scroll_view.js";
 
 const navlinks = document.querySelector("[data-element='nav-links']");
 const navbar = document.querySelector("[data-element='navbar']");
@@ -7,7 +7,7 @@ const contactContent = document.querySelector("[data-element='contact']");
 const footer = document.querySelector("[data-element='footer']");
 const scrollBtn = document.querySelector("[data-element='scroll-btn']");
 
-function toggleMenu() {
+export function toggleMenu() {
   mainContent.classList.toggle("toggled");
   contactContent.classList.toggle("toggled");
   footer.classList.toggle("toggled");
@@ -20,10 +20,10 @@ function toggleMenu() {
   const { href } = window.location;
   const hrefDelimiter = /#[a-zA-Z]+/;
 
-  if (hrefDelimiter.test(href)) scrollController.scrollTo(href);
+  if (hrefDelimiter.test(href)) scrollTo(href);
 }
 
-function escapeMenu(key) {
+export function escapeMenu({ key }) {
   if (key !== "Escape") {
     return;
   }
@@ -33,7 +33,7 @@ function escapeMenu(key) {
   }
 }
 
-function exitMenu(target) {
+export function exitMenu({ target }) {
   const isNavlink = target.parentNode === navlinks;
   const isExpanded = navbar.classList.contains("expanded");
 
@@ -44,17 +44,16 @@ function exitMenu(target) {
   toggleMenu();
 
   const linkURL = target.getAttribute("href");
-  scrollController.scrollTo(linkURL);
+  scrollTo(linkURL);
 }
 
-function observeNavigation(evt) {
-  const { target } = evt;
-
+export function observeNavigation({ target }) {
   const navLinks = document.querySelectorAll("[data-link='navbar']");
 
   if (target.dataset.link === "navbar") {
     navLinks.forEach((navlink) => {
-      const hasToBeChanged = navlink !== target && navlink.classList.contains("active")
+      const hasToBeChanged =
+        navlink !== target && navlink.classList.contains("active");
 
       if (hasToBeChanged) navlink.classList.remove("active");
     });
@@ -64,10 +63,3 @@ function observeNavigation(evt) {
     target.classList.add("active");
   }
 }
-
-export const menuController = {
-  toggleMenu,
-  escapeMenu,
-  exitMenu,
-  observeNavigation,
-};
