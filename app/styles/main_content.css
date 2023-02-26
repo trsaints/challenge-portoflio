@@ -13,37 +13,37 @@
   padding-top: 88px;
 }
 
-.main__about__title,
-.main__skills__title,
-.main__hobbies__title,
-.main__graduations__title,
-.main__projects__title,
-.contact__title {
+.about__title,
+.skills__title,
+.hobbies__title,
+.graduations__title,
+.projects__title,
+.fieldset__title {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 32px;
 }
 
-.main__skills__list,
-.main__hobbies__list,
-.main__graduations__list {
+.skills__list,
+.hobbies__list,
+.graduations__list {
   display: grid;
   margin-top: 32px;
   flex-wrap: wrap;
 }
 
-.main__skills__list,
-.main__hobbies__list {
+.skills__list,
+.hobbies__list {
   grid-template-columns: repeat(auto-fit, minmax(min(163px, 100%), 1fr));
 }
 
-.main__skills__description,
-.main__hobbies__description {
+.skills__description,
+.hobbies__description {
   text-align: center;
 }
 
-.main__skill,
-.main__hobby {
+.list__skill,
+.list__hobby {
   font-weight: 700;
   flex: 1;
   min-width: 160px;
@@ -57,39 +57,39 @@
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  .main__skill,
-  .main__hobby {
+  .list__skill,
+  .list__hobby {
     transition: all ease 0.2s;
   }
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
-  .main__skill,
-  .main__hobby {
+  .list__skill,
+  .list__hobby {
     transition: all ease-in-out 0.2s;
   }
 }
 
-.main__skill:hover,
-.main__hobby:hover {
+.list__skill:hover,
+.list__hobby:hover {
   border-bottom-color: var(--c-main);
 }
 
-.main__skill:hover,
-.main__hobby:hover,
-.main__graduation__banner:hover {
+.list__skill:hover,
+.list__hobby:hover,
+.graduation__banner:hover {
   transform: scale(1.05);
   color: var(--c-main);
 }
 
-.main__skills__list,
-.main__hobbies__list,
-.main__graduations__list {
+.skills__list,
+.hobbies__list,
+.graduations__list {
   gap: 1rem;
 }
 
-.main__skill,
-.main__hobby {
+.list__skill,
+.list__hobby {
   display: flex;
 }
 
@@ -108,13 +108,13 @@
     padding-top: 96px;
   }
 
-  .main__skills__list,
-  .main__hobbies__list,
-  .main__graduations__list {
+  .skills__list,
+  .hobbies__list,
+  .graduations__list {
     justify-content: center;
   }
 
-  .main__graduations__list {
+  .graduations__list {
     grid-template-columns: repeat(auto-fit, minmax(min(224px, 100%), 1fr));
   }
 }

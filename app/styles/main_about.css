@@ -7,11 +7,11 @@
   box-shadow: 0 0 16px var(--c-gray);
 }
 
-.main__about__title {
+.about__title {
   color: var(--c-main);
 }
 
-.main__about__description {
+.about__description {
   color: var(--c-white);
   font-weight: 500;
 }

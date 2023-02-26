@@ -1,4 +1,5 @@
-.scroll__button {
+.scroller {
+  text-decoration: none;
   border-radius: 100%;
   border: none;
   box-shadow: 0 0 2px var(--c-white--l);
@@ -21,35 +22,35 @@
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  .scroll__button {
+  .scroller {
     transition: all 0.2s ease;
   }
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
-  .scroll__button {
+  .scroller {
     transition: all 0.2s ease-in-out;
   }
 }
 
-.scroll__button i {
+.scroller i {
   font-size: 1.7rem;
 }
 
-.scroll__button:active,
-.scroll__button:hover {
+.scroller:active,
+.scroller:hover {
   color: var(--c-main);
   transform: scale(1.025);
 }
 
 @media screen and (min-width: 768px) {
-  .scroll__button {
+  .scroller {
     left: calc(100vw - 4.25rem - 40px);
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .scroll__button {
+  .scroller {
     left: calc(100vw - 0.5rem - 80px);
   }
 }

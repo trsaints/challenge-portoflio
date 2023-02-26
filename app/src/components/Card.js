@@ -7,7 +7,7 @@ export default class Card {
   }
 
   #generate({ name, desc, banner, repoURL, demoURL }) {
-    const projectCard = generateElement("div", "main__project");
+    const projectCard = generateElement("div", "list__project");
     const projectBanner = this.#generateBanner(banner);
     const projectContent = this.#generateContent(name, desc, repoURL, demoURL);
 
@@ -18,15 +18,15 @@ export default class Card {
   }
 
   #generateBanner(src) {
-    const projectBanner = generateElement("img", "main__project__banner");
+    const projectBanner = generateElement("img", "project__banner");
     projectBanner.setAttribute("src", src);
     return projectBanner;
   }
 
   #generateContent(name, desc, repo, demo) {
-    const projectContent = generateElement("div", "main__project__content");
-    const projectTitle = generateElement("h3", "main__project__title");
-    const projectDesc = generateElement("p", "main__project__description");
+    const projectContent = generateElement("div", "project__content");
+    const projectTitle = generateElement("h3", "content__title");
+    const projectDesc = generateElement("p", "content__description");
     const projectButtons = this.#generateButtons(repo, demo);
 
     projectTitle.textContent = name;
@@ -40,9 +40,9 @@ export default class Card {
   }
 
   #generateButtons(repo, demo) {
-    const options = generateElement("menu", "main__project__options");
-    const repoAnchor = generateElement("a", "main__project__link");
-    const demoAnchor = generateElement("a", "main__project__link");
+    const options = generateElement("menu", "content__options");
+    const repoAnchor = generateElement("a", "options__link");
+    const demoAnchor = generateElement("a", "options__link");
 
     const srSpan = generateElement("span", "sr-only");
     const spanText = document.createTextNode("Ver ");

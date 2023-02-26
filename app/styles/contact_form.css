@@ -23,12 +23,12 @@
   gap: 1rem;
 }
 
-.contact__form__box {
+.form__fieldset {
   flex-direction: column;
   gap: 1rem;
 }
 
-.contact__form__field {
+.fieldset__field {
   flex-direction: column;
   gap: 0.25rem;
 
@@ -39,32 +39,32 @@
   max-width: calc(100vw - 32px);
 }
 
-.contact__form__field:is(:focus-within) .contact__form__label{
+.fieldset__field:is(:focus-within) .field__label {
   color: var(--c-main--ds);
   transform: translateX(1%);
 }
 
-.contact__form__label {
+.field__label {
   color: var(--c-gray);
   font-weight: 500;
   cursor: pointer;
 }
 
-.contact__form__label:hover, 
-.contact__form__label:active {
+.field__label:hover,
+.field__label:active {
   color: var(--c-main--ds);
 }
 
-.contact__form__input {
+.field__input {
   border: 4px solid transparent;
   font-weight: 300;
 }
 
-.contact__form__input:focus {
+.field__input:focus {
   border-bottom-color: var(--c-main);
 }
 
-.contact__form__button {
+.fieldset__button {
   color: var(--c-white--ls);
   background-color: var(--c-black);
 
@@ -73,35 +73,34 @@
   padding: 16px;
 
   align-self: flex-start;
-
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  .contact__form__label,
-  .contact__form__input,
-  .contact__form__button {
+  .field__label,
+  .field__input,
+  .fieldset__button {
     transition: all 0.2s ease;
   }
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
-  .contact__form__label,
-  .contact__form__input,
-  .contact__form__button {
+  .field__label,
+  .field__input,
+  .fieldset__button {
     transition: all 0.2s ease-in-out;
   }
 }
 
-.contact__form__button:hover,
-.contact__form__button:focus {
+.fieldset__button:hover,
+.fieldset__button:focus {
   background-color: var(--c-main);
   color: var(--c-black);
 
   box-shadow: 0.25rem 0.25rem 0.125rem var(--c-gray);
 }
 
-.contact__form__button:focus {
-  outline: .125rem solid var(--c-black);
+.fieldset__button:focus {
+  outline: 0.125rem solid var(--c-black);
   transform: scale(1.03);
 }
 

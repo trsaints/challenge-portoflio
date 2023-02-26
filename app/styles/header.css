@@ -24,7 +24,7 @@
   place-items: center;
 }
 
-.header__menu__btn {
+.menu__btn {
   display: inline-block;
   background-color: transparent;
   color: inherit;
@@ -32,14 +32,14 @@
   font-size: 1.2rem;
 }
 
-.header__menu__btn:hover,
-.header__nav__link:hover,
-.header__nav__link:focus {
+.menu__btn:hover,
+.links__item:hover,
+.links__item:focus {
   color: var(--c-main);
 }
 
-.header__menu__btn:active,
-.header__nav__link:active {
+.menu__btn:active,
+.links__item:active {
   color: var(--c-main--ds);
 }
 
@@ -55,7 +55,7 @@
   height: 100vh;
 }
 
-.header__nav__links {
+.nav__links {
   flex-direction: column;
   gap: 0.75rem;
   text-align: center;
@@ -63,7 +63,7 @@
   padding-top: 40px;
 }
 
-.header__nav__link {
+.links__item {
   display: inline-block;
   border-bottom: 4px solid transparent;
   padding: 4px 8px;
@@ -73,13 +73,13 @@
   font-variant: small-caps;
 }
 
-.header__nav__link.active {
+.links__item.active {
   z-index: 1;
   position: relative;
   color: var(--c-black);
 }
 
-.header__nav__link.active::before {
+.links__item.active::before {
   display: block;
   z-index: -1;
   content: "";
@@ -93,44 +93,44 @@
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  .header__menu__btn,
-  .header__nav__link,
+  .menu__btn,
+  .links__item,
   .header__nav.expanded,
   .header__nav:not(.expanded) {
     transition: all 0.2s ease;
   }
 
-  .header__nav__link.active::before {
+  .links__item.active::before {
     opacity: 0;
     animation: unvanish 0.2s forwards;
   }
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
-  .header__menu__btn,
-  .header__nav__link,
+  .menu__btn,
+  .links__item,
   .header__nav.expanded,
   .header__nav:not(.expanded) {
     transition: all 0.2s ease-in-out;
   }
 
-  .header__nav__link.active::before {
+  .links__item.active::before {
     opacity: 0;
     animation: unvanish 0.2s forwards;
   }
 }
 
-.header__nav__link:hover,
-.header__nav__link:focus {
+.links__item:hover,
+.links__item:focus {
   border-bottom-color: inherit;
 }
 
-.header__nav__link.active:hover,
-.header__nav__link.active:focus {
+.links__item.active:hover,
+.links__item.active:focus {
   border-bottom-color: transparent;
 }
 
-.header__nav__link:focus {
+.links__item:focus {
   outline: none;
 }
 
@@ -147,7 +147,7 @@
     width: 5rem;
   }
 
-  .header__menu__btn {
+  .menu__btn {
     display: none;
   }
 
@@ -155,7 +155,7 @@
     height: auto;
   }
 
-  .header__nav__links {
+  .nav__links {
     flex-direction: row;
 
     padding-top: 0;

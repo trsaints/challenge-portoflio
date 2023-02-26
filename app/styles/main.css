@@ -116,7 +116,7 @@ a {
 .main.toggled,
 .contact.toggled,
 .footer.toggled,
-.scroll__button.toggled {
+.scroller.toggled {
   display: none;
 }
 
