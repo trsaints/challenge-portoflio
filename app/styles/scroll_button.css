@@ -1,55 +1,60 @@
-.scroll__button {
-  border-radius: 100%;
-  border: none;
-  box-shadow: 0 0 2px var(--c-white--l);
-
-  width: 4.25rem;
-  height: 4.25rem;
-  text-align: center;
-  line-height: 1;
+.scroller {
   display: grid;
   place-items: center;
+  text-align: center;
+  line-height: 1;
+  
+  border: none;
   font-size: 0.75rem;
-
-  background-color: var(--c-black--l);
-  color: var(--c-white--ls);
-
+  width: 4.25rem;
+  height: 4.25rem;
+  
   position: fixed;
   left: calc(100vw - 4.25rem - 16px);
   top: calc(100vh - 4.25rem - 16px);
   z-index: 1000;
+  
+  background-color: var(--c-black--l);
+  border-radius: 100%;
+  box-shadow: 0 0 2px var(--c-white--l);
+  color: var(--c-white--ls);
+  text-decoration: none;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  .scroll__button {
+  .scroller {
     transition: all 0.2s ease;
   }
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
-  .scroll__button {
+  .scroller {
     transition: all 0.2s ease-in-out;
   }
 }
 
-.scroll__button i {
+.scroller i {
   font-size: 1.7rem;
 }
 
-.scroll__button:active,
-.scroll__button:hover {
+.scroller:hover,
+.scroller:focus {
   color: var(--c-main);
-  transform: scale(1.025);
+  transform: scale(1.05);
+}
+
+.scroller:active {
+  transform: scale(1);
 }
 
 @media screen and (min-width: 768px) {
-  .scroll__button {
+  .scroller {
     left: calc(100vw - 4.25rem - 40px);
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .scroll__button {
+  .scroller {
     left: calc(100vw - 0.5rem - 80px);
   }
 }

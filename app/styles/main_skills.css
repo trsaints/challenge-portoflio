@@ -1,28 +1,25 @@
 @import url(./animations.css);
 
-.main__skill {
-  background-size: 0;
-  background-repeat: no-repeat;
+.list__skill {
   background-position: center center;
-}
-
-.main__skill:hover,
-.main__skill:active {
-  background-size: 4rem; 
-}
-
-.main__skill:not(:hover) {
+  background-repeat: no-repeat;
   background-size: 0;
 }
 
-.main__skill:first-child {
+.list__skill:hover,
+.list__skill:active,
+.list__skill:focus {
+  background-size: 4rem;
+}
+
+.list__skill:first-child {
   background-image: url("../public/images/html5-brands.svg");
 }
 
-.main__skill:nth-child(2) {
+.list__skill:nth-child(2) {
   background-image: url("../public/images/css3-brands.svg");
 }
 
-.main__skill:nth-child(3) {
+.list__skill:nth-child(3) {
   background-image: url("../public/images/js-brands.svg");
 }

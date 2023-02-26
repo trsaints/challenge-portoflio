@@ -78,23 +78,33 @@
       </picture>
 
       <div class="header__menu">
-        <button type="button" data-element="menu" class="header__menu__btn">
+        <button type="button" data-element="menu" class="menu__btn">
           <i class="fa-solid fa-bars" aria-hidden="true"></i> Menu
         </button>
 
         <nav class="header__nav" data-element="navbar">
-          <div class="header__nav__links wrapper" data-element="nav-links">
-            <a data-link="navbar" href="#about" class="header__nav__link">sobre mim</a>
+          <div class="nav__links wrapper" data-element="nav-links">
+            <a data-link="navbar" href="#about" class="links__item"
+              >sobre mim</a
+            >
 
-            <a data-link="navbar" href="#skills" class="header__nav__link">skills</a>
+            <a data-link="navbar" href="#skills" class="links__item">skills</a>
 
-            <a data-link="navbar" href="#hobbies" class="header__nav__link">hobbies</a>
+            <a data-link="navbar" href="#hobbies" class="links__item"
+              >hobbies</a
+            >
 
-            <a data-link="navbar" href="#graduations" class="header__nav__link">formação</a>
+            <a data-link="navbar" href="#graduations" class="links__item"
+              >formação</a
+            >
 
-            <a data-link="navbar" href="#projects" class="header__nav__link">projetos</a>
+            <a data-link="navbar" href="#projects" class="links__item"
+              >projetos</a
+            >
 
-            <a data-link="navbar" href="#contact" class="header__nav__link">contato</a>
+            <a data-link="navbar" href="#contact" class="links__item"
+              >contato</a
+            >
           </div>
         </nav>
       </div>
@@ -102,46 +112,57 @@
 
     <main class="main" data-element="main" id="main">
       <div class="main__hero wrapper">
-        <section class="main__hero__box wrapper">
-          <h1 class="main__hero__title">
+        <section class="hero__info wrapper">
+          <h1 class="hero__title">
             Olá, meu nome é <span lang="pt-br">Thiago</span> e construo páginas
             Web.
           </h1>
 
-          <p class="main__hero__description">
+          <p class="hero__description">
             Eu desenvolvo interfaces através de código.
           </p>
 
-          <nav class="main__hero__links wrapper">
-            <a href="https://github.com/trsaints" class="main__hero__link">
+          <nav class="hero__nav wrapper">
+            <a
+              rel="noopener"
+              target="_blank"
+              href="https://github.com/trsaints"
+              class="nav__link"
+            >
               GitHub
               <i class="fa-brands fa-github" aria-hidden="true"></i>
             </a>
 
             <a
+              rel="noopener"
+              target="_blank"
               href="https://www.linkedin.com/in/trsaints2003/"
-              class="main__hero__link"
+              class="nav__link"
               >LinkedIn <i class="fa-brands fa-linkedin" aria-hidden="true"></i
             ></a>
 
             <a
+              rel="noopener"
+              target="_blank"
               href="https://www.youtube.com/channel/UC2nx2A4nAL7piYG58Fi7xsg"
-              class="main__hero__link"
+              class="nav__link"
               >YouTube
               <i class="fa-brands fa-youtube" aria-hidden="true"></i>
             </a>
           </nav>
         </section>
 
-        <picture class="main__hero__banner">
+        <picture class="hero__banner">
           <img src="./app/public/images/trsaints-logos_black.png" alt="" />
         </picture>
       </div>
 
       <section class="main__about" id="about">
-        <h2 class="main__about__title">sobre mim <i class="fa-solid fa-circle-info"></i></h2>
+        <h2 class="about__title">
+          sobre mim <i class="fa-solid fa-circle-info"></i>
+        </h2>
 
-        <p class="main__about__description">
+        <p class="about__description">
           Desde criança gosto de computadores e de arte. Na Web, consigo
           misturar os dois, através das tecnologias do
           <span lang="en">Front-End</span>
@@ -149,30 +170,31 @@
       </section>
 
       <section class="main__skills" id="skills">
-        <h2 class="main__skills__title txt-center">
-          minhas <span lang="en">skills</span><i class="fa-solid fa-chart-pie"></i>
+        <h2 class="skills__title txt-center">
+          minhas <span lang="en">skills</span
+          ><i class="fa-solid fa-chart-pie"></i>
         </h2>
 
-        <p class="main__skills__description">
+        <p class="skills__description">
           Estas são as tecnologias com que estou trabalhando no momento:
         </p>
 
-        <ul class="main__skills__list">
-          <li class="main__skill">
+        <ul class="skills__list">
+          <li class="list__skill" tabindex="0">
             <span lang="en"
               ><abbr title="Hypertext Markup Language">HTML</abbr>5</span
             >
             <i class="fa-brands fa-html5" aria-hidden="true"></i>
           </li>
 
-          <li class="main__skill">
+          <li class="list__skill" tabindex="0">
             <span lang="en"
               ><abbr title="Cascading Style Sheets">CSS</abbr></span
             >
             <i class="fa-brands fa-css3" aria-hidden="true"></i>
           </li>
 
-          <li class="main__skill">
+          <li class="list__skill" tabindex="0">
             <span lang="en">JavaScript</span>
             <i class="fa-brands fa-js" aria-hidden="true"></i>
           </li>
@@ -180,69 +202,72 @@
       </section>
 
       <section class="main__hobbies" id="hobbies">
-        <h2 class="main__hobbies__title txt-center">
-          meus <span lang="en">hobbies</span><i class="fa-solid fa-dice-d20"></i>
+        <h2 class="hobbies__title txt-center">
+          meus <span lang="en">hobbies</span
+          ><i class="fa-solid fa-dice-d20"></i>
         </h2>
 
-        <p class="main__hobbies__description">
+        <p class="hobbies__description">
           Afinal, nem só de código viverá o programador (nem de café).
         </p>
 
-        <ul class="main__hobbies__list">
-          <li class="main__hobby">
+        <ul class="hobbies__list">
+          <li class="list__hobby" tabindex="0">
             desenhar<i class="fa-solid fa-pen" aria-hidden="true"></i>
           </li>
 
-          <li class="main__hobby">
+          <li class="list__hobby" tabindex="0">
             ler<i class="fa-solid fa-book" aria-hidden="true"></i>
           </li>
 
-          <li class="main__hobby">
+          <li class="list__hobby" tabindex="0">
             treinar<i class="fa-solid fa-dumbbell" aria-hidden="true"></i>
           </li>
 
-          <li class="main__hobby">
+          <li class="list__hobby" tabindex="0">
             jogar<i class="fa-solid fa-gamepad" aria-hidden="true"></i>
           </li>
         </ul>
       </section>
 
       <section class="main__graduations" id="graduations">
-        <h2 class="main__graduations__title txt-center">minhas formações <i class="fa-solid fa-graduation-cap"></i></h2>
+        <h2 class="graduations__title txt-center">
+          minhas formações <i class="fa-solid fa-graduation-cap"></i>
+        </h2>
 
-        <ul class="main__graduations__list">
-          <li class="main__graduation">
+        <ul class="graduations__list">
+          <li class="list__graduation" tabindex="0">
             <img
               src="./app/public/images/senai-logo.svg"
               alt=""
-              class="main__graduation__banner"
+              class="graduation__banner"
             />
 
-            <h3 class="main__graduation__title">Web Designer</h3>
+            <h3 class="graduation__title">Web Designer</h3>
 
             <p>2021 ─ SENAI</p>
           </li>
 
-          <li class="main__graduation">
+          <li class="list__graduation" tabindex="0">
             <img
               src="./app/public/images/senai-logo.svg"
               alt=""
-              class="main__graduation__banner"
+              class="graduation__banner"
             />
 
-            <h3 class="main__graduation__title">Desenvolvedor Mobile</h3>
+            <h3 class="graduation__title">Desenvolvedor Mobile</h3>
 
             <p>2022 ─ SENAI</p>
           </li>
 
-          <li class="main__graduation">
+          <li class="list__graduation" tabindex="0">
             <img
               src="./app/public/images/alura-logo-dark.svg"
               alt=""
-              class="main__graduation__banner"
+              class="graduation__banner"
             />
 
-            <h3 class="main__graduation__title">Oracle Next Education</h3>
+            <h3 class="graduation__title">Oracle Next Education</h3>
 
             <p>2022 ─ Alura</p>
           </li>
@@ -250,15 +275,17 @@
       </section>
 
       <section class="main__projects" id="projects">
-        <h2 class="main__projects__title txt-center">meu trabalho <i class="fa-solid fa-laptop-code"></i></h2>
+        <h2 class="projects__title txt-center">
+          meu trabalho <i class="fa-solid fa-laptop-code"></i>
+        </h2>
 
-        <p class="main__projects__description">
+        <p class="projects__description">
           Já tivemos o bastante de apresentações por aqui. Que tal dar uma
           olhada nos meus projetos?
         </p>
 
         <button
-          class="main__projects__button"
+          class="projects__button"
           type="button"
           data-element="projects-btn"
         >
@@ -266,7 +293,7 @@
           <i class="fa-solid fa-folder-open" aria-hidden="true"></i>
         </button>
 
-        <div class="main__projects__list" data-element="projects-list"></div>
+        <div class="projects__list" data-element="projects-list"></div>
       </section>
     </main>
 
@@ -278,61 +305,59 @@
       />
 
       <form class="contact__form" data-element="form">
-        <fieldset class="contact__form__box wrapper">
-          <legend class="contact__title">Contato <i class="fa-solid fa-user-plus"></i></legend>
+        <fieldset class="form__fieldset wrapper">
+          <legend class="fieldset__title">
+            Contato <i class="fa-solid fa-user-plus"></i>
+          </legend>
 
-          <p class="contact__description">
+          <p class="fieldset__description">
             Quer me dizer alguma coisa?
             <br />
             Preencha o formulário e em breve entrarei em contato.
           </p>
 
-          <div class="contact__form__field wrapper" data-element="form-field">
-            <label class="contact__form__label" for="form-name">Nome:</label>
+          <div class="fieldset__field wrapper" data-element="form-field">
+            <label class="field__label" for="form-name">Nome:</label>
 
             <input
               type="text"
               name="name"
-              class="contact__form__input"
+              class="field__input"
               id="form-name"
               required
             />
           </div>
 
-          <div class="contact__form__field wrapper" data-element="form-field">
-            <label class="contact__form__label" for="form-email">Email:</label>
+          <div class="fieldset__field wrapper" data-element="form-field">
+            <label class="field__label" for="form-email">Email:</label>
 
             <input
               type="email"
               name="email"
-              class="contact__form__input"
+              class="field__input"
               id="form-email"
               required
             />
           </div>
 
-          <div class="contact__form__field wrapper" data-element="form-field">
-            <label class="contact__form__label" for="form-subject"
-              >Assunto:</label
-            >
+          <div class="fieldset__field wrapper" data-element="form-field">
+            <label class="field__label" for="form-subject">Assunto:</label>
 
             <input
               type="text"
               name="subject"
-              class="contact__form__input"
+              class="field__input"
               id="form-subject"
               required
             />
           </div>
 
-          <div class="contact__form__field wrapper" data-element="form-field">
-            <label class="contact__form__label" for="form-message"
-              >Mensagem:</label
-            >
+          <div class="fieldset__field wrapper" data-element="form-field">
+            <label class="field__label" for="form-message">Mensagem:</label>
 
             <textarea
               name="message"
-              class="contact__form__input"
+              class="field__input"
               id="form-message"
               cols="30"
               rows="10"
@@ -340,7 +365,7 @@
             ></textarea>
           </div>
 
-          <button type="submit" class="contact__form__button" disabled>
+          <button type="submit" class="fieldset__button" disabled>
             entrar em contato
             <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
           </button>
@@ -353,12 +378,14 @@
 
       <p class="footer__description">
         Feito por
-        <a class="footer__link" href="https://github.com/trsaints">@trsaints</a>
+        <a class="description__link" href="https://github.com/trsaints"
+          >@trsaints</a
+        >
         ─ 2022
       </p>
     </footer>
 
-    <a class="scroll__button" href="#main" data-element="scroll-btn">
+    <a class="scroller" href="#main" data-element="scroll-btn">
       <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
 
       <span class="sr-only">Voltar ao topo</span>

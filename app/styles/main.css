@@ -34,11 +34,12 @@
 }
 
 * {
-  font-family: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+
   -webkit-tap-highlight-color: transparent;
+  font-family: inherit;
 }
 
 html {
@@ -52,26 +53,27 @@ html {
 }
 
 body {
-  font-family: "Red Hat Display", sans-serif;
-  font-weight: 300;
-  font-size: 1.125rem;
-  line-height: 1.2;
   letter-spacing: 0.125rem;
-
+  line-height: 1.2;
+  
+  font-size: 1.125rem;
+  
   background-color: var(--c-white--l);
   color: var(--c-black--l);
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 300;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
   body {
-    opacity: 0;
     animation: unvanish 0.2s forwards;
+    opacity: 0;
   }
 }
 @media screen and (prefers-reduced-motion: no-preference) {
   body {
-    opacity: 0;
     animation: unvanish 0.4s forwards;
+    opacity: 0;
   }
 }
 
@@ -110,13 +112,18 @@ i {
 a {
   display: inline-flex;
   gap: 0.25rem;
+
   color: inherit;
+}
+
+a:focus {
+  outline: none;
 }
 
 .main.toggled,
 .contact.toggled,
 .footer.toggled,
-.scroll__button.toggled {
+.scroller.toggled {
   display: none;
 }
 
@@ -128,11 +135,13 @@ a {
 
 ::-webkit-scrollbar {
   width: 0.5rem;
+
   background-color: var(--c-white--l);
 }
 
 ::-webkit-scrollbar-thumb {
   width: 0.5rem;
+  
   background-color: var(--c-black--l);
 }
 

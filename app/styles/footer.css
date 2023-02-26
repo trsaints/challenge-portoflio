@@ -1,36 +1,37 @@
 .footer {
-  background-color: var(--c-black);
-  color: var(--c-white--ls);
-
   display: grid;
   place-items: center;
   text-align: center;
-
+  
   padding-block: 48px;
+
+  background-color: var(--c-black);
+  color: var(--c-white--ls);
 }
 
 .footer__title {
-  font-weight: 700;
   margin-bottom: 16px;
+  
+  font-weight: 700;
 }
 
-.footer__link {
+.description__link {
   color: inherit;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  .footer__link {
+  .description__link {
     transition: all 0.2s ease;
   }
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
-  .footer__link {
+  .description__link {
     transition: all 0.2s ease-in-out;
   }
 }
 
-.footer__link:hover {
-  text-decoration: none;
+.description__link:hover {
   color: var(--c-main);
+  text-decoration: none;
 }

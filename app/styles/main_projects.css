@@ -2,216 +2,237 @@
 
 .main__projects {
   display: flex;
-  flex-direction: column;
   align-items: center;
-
-  text-align: center;
+  flex-direction: column;
 }
 
-.main__projects__description {
+.projects__description {
+  text-align: center;
+
   font-size: 1.25rem;
   margin-bottom: 16px;
 }
 
-.main__projects__button {
-  padding: 16px;
+.projects__button {
+  border: none;
   margin-bottom: 16px;
+  padding: 16px;
+
   background-color: var(--c-black);
   color: var(--c-white--ls);
-  border: none;
 }
 
-.main__projects__button:hover,
-.main__projects__button:active,
-.main__projects__button:focus {
+.projects__button:hover,
+.projects__button:focus {
   background-color: var(--c-main);
-  color: var(--c-black);
-
   box-shadow: 4px 4px 2px var(--c-gray);
-}
-
-.main__projects__button:focus {
-  outline: 2px solid var(--c-black);
+  color: var(--c-black);
   transform: scale(1.03);
 }
 
-.main__projects__list {
+.projects__button:focus-visible {
+  outline: 2px solid var(--c-black);
+}
+
+.projects__button:active {
+  box-shadow: 0 0 0 transparent;
+  transform: scale(1);
+}
+
+.projects__list {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+
   margin-top: 48px;
 }
 
-.main__project {
+.list__project {
   display: grid;
+  gap: 1rem;
   grid-template-areas: "banner" "detail";
   grid-template-rows: 1fr 1fr;
-  height: max-content;
-
-  gap: 1rem;
-  background-color: var(--c-white--ls);
-
-  box-shadow: 4px 4px 4px var(--c-gray--ls);
-  max-width: 100%;
-
   overflow: hidden;
+  text-align: center;
+  
+  max-width: 100%;
+  height: auto;
+  
+  background-color: var(--c-white--ls);
+  box-shadow: 4px 4px 4px var(--c-gray--ls);
 }
 
-.main__project:hover,
-.main__project:focus-within {
+.list__project:hover,
+.list__project:focus-within {
   box-shadow: none;
 }
 
-.main__project:hover .main__project__title,
-.main__project:active .main__project__title {
+.list__project:hover .content__title,
+.list__project:active .content__title {
   color: var(--c-main--ds);
 }
 
-.main__project__banner {
+.project__banner {
   grid-area: banner;
-  height: 100%;
+
   object-fit: cover;
+
+  height: 100%;
 }
 
-.main__project__content {
+.project__content {
   grid-area: detail;
-  align-self: flex-end;
 
   display: flex;
+  align-self: flex-end;
   flex-direction: column;
   gap: 0.5rem;
 
   padding: 16px;
 }
 
-.main__project__title {
-  font-weight: 700;
-
+.content__title {
   font-size: 1.25rem;
+
+  font-weight: 700;
 }
 
-.main__project__description {
-  font-weight: 500;
+.content__description {
   font-size: 0.875rem;
+
+  font-weight: 500;
 }
 
-.main__project__options {
+.content__options {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.main__project__link {
-  text-decoration: none;
+.options__link {
   display: flex;
-  justify-content: center;
   flex: 1;
-  padding: 12px 16px;
-  font-weight: 500;
+  justify-content: center;
+  
   font-size: 1rem;
+  padding: 12px 16px;
+
+  font-weight: 500;
+  text-decoration: none;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  .main__projects__button,
-  .main__project,
-  .main__project__title,
-  .main__project__link {
+  .projects__button,
+  .list__project,
+  .content__title,
+  .options__link {
     transition: all 0.2s ease;
   }
 
-  .main__project {
+  .list__project {
     animation: unvanish 0.1s forwards;
   }
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
-  .main__projects__button,
-  .main__project,
-  .main__project__title,
-  .main__project__link {
+  .projects__button,
+  .list__project,
+  .content__title,
+  .options__link {
     transition: all 0.2s ease-in-out;
   }
 
-  .main__project {
+  .list__project {
     animation: unvanish 0.2s forwards;
   }
 }
 
-.main__project__link:hover,
-.main__project__link:active,
-.main__project__link:focus {
+.options__link:hover,
+.options__link:focus {
+  box-shadow: 4px 4px 2px var(--c-gray);
   transform: scale(1.03);
 }
 
-.main__project__link:focus {
+.options__link:focus-visible {
   outline: 2px solid var(--c-black);
 }
 
-.main__project__link:first-child {
-  color: var(--c-main--d);
+.options__link:active {
+  transform: scale(1);
+  box-shadow: none;
+}
+
+.options__link:first-child {
+  border: 2px solid var(--c-main--d);
+
   background-color: var(--c-white--ls);
-  border: 2px solid var(--c-main--d);
+  color: var(--c-main--d);
 }
 
-.main__project__link:nth-child(2) {
-  color: var(--c-white--ls);
+.options__link:nth-child(2) {
+  border: 2px solid var(--c-main--d);
+  
   background-color: var(--c-main--d);
-  border: 2px solid var(--c-main--d);
+  color: var(--c-white--ls);
 }
 
-.main__project__link:first-child:hover {
-  color: var(--c-main--ds);
-  background-color: var(--c-white--l);
+.options__link:first-child:hover {
   border: 2px solid var(--c-main--ds);
+
+  background-color: var(--c-white--l);
+  color: var(--c-main--ds);
 }
 
-.main__project__link:nth-child(2):hover {
+.options__link:nth-child(2):hover {
   background-color: var(--c-main--ds);
   border-color: var(--c-main--ds);
 }
 
 @media screen and (min-width: 512px) {
-  .main__project__options {
+  .content__options {
     flex-direction: row;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .main__project {
+  .list__project {
+    height: 40rem;
+  }
+
+  .project__banner {
+    width: 100%;
     height: 20rem;
   }
 
-  .main__project__banner {
-    width: 100%;
+  .project__content {
+    align-self: center;
   }
 
-  .main__project__title {
+  .content__title {
     font-size: 1.5rem;
   }
 
-  .main__project__description {
+  .content__description {
     font-size: 1rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .main__project {
+  .list__project {
     grid-template-rows: 1fr;
+    
+    height: 20rem;
   }
 
-  .main__project:nth-child(even) {
+  .list__project:nth-child(even) {
     grid-template-areas: "banner detail";
     grid-template-columns: 4fr 5fr;
     text-align: left;
   }
-
-  .main__project:nth-child(odd) {
+  
+  .list__project:nth-child(odd) {
     grid-template-areas: "detail banner";
     grid-template-columns: 5fr 4fr;
     text-align: right;
-  }
-
-  .main__project__content {
-    align-self: center;
   }
 }

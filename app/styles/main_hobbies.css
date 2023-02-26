@@ -1,32 +1,29 @@
-.main__hobby {
+.list__hobby {
   background-position: center -200px;
-  background-size: contain;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.main__hobby:first-child {
+.list__hobby:first-child {
   background-image: url("../public/images/undraw_artist_custom.svg");
   background-size: 11rem;
 }
 
-.main__hobby:nth-child(2) {
+.list__hobby:nth-child(2) {
   background-image: url("../public/images/undraw_reading_custom.svg");
 }
 
-.main__hobby:nth-child(3) {
+.list__hobby:nth-child(3) {
   background-image: url("../public/images/undraw_running_person.svg");
   background-size: 8rem;
 }
 
-.main__hobby:nth-child(4) {
+.list__hobby:nth-child(4) {
   background-image: url("../public/images/undraw_gaming.svg");
 }
 
-.main__hobby:hover,
-.main__hobby:active {
+.list__hobby:hover,
+.list__hobby:active,
+.list__hobby:focus {
   background-position: center center;
-}
-
-.main__hobby:not(:hover) {
-  background-position: center -200px;
 }
