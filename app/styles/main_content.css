@@ -19,17 +19,19 @@
 .graduations__title,
 .projects__title,
 .fieldset__title {
+  margin-bottom: 32px;
+
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 32px;
 }
 
 .skills__list,
 .hobbies__list,
 .graduations__list {
   display: grid;
-  margin-top: 32px;
   flex-wrap: wrap;
+
+  margin-top: 32px;
 }
 
 .skills__list,
@@ -44,16 +46,16 @@
 
 .list__skill,
 .list__hobby {
-  font-weight: 700;
+  align-items: flex-end;
   flex: 1;
+  
+  border-bottom: 4px solid var(--c-black);
   min-width: 160px;
   min-height: 160px;
   padding: 16px;
-
+  
   background-color: var(--c-white--ls);
-  align-items: flex-end;
-
-  border-bottom: 4px solid var(--c-black);
+  font-weight: 700;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -78,8 +80,8 @@
 .list__skill:hover,
 .list__hobby:hover,
 .graduation__banner:hover {
-  transform: scale(1.05);
   color: var(--c-main);
+  transform: scale(1.05);
 }
 
 .skills__list,

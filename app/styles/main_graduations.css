@@ -1,20 +1,22 @@
 .main__graduations {
-  background-color: var(--c-white);
   gap: 0.5rem;
+
+  background-color: var(--c-white);
 }
 
 .list__graduation {
-  flex: 1;
   display: flex;
-  gap: 0.5rem;
+  flex: 1;
   flex-direction: column;
+  gap: 0.5rem;
+
   min-width: 192px;
 }
 
 .graduation__banner {
   height: 15rem;
+  
   background-color: var(--c-white--ls);
-
   transition: all 0.2s ease-in-out;
 }
 

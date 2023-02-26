@@ -1,9 +1,7 @@
 .main__about {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) 100%,
     url("../public/images/mohammad-rahmani-1bNQVGzuy0U-unsplash.jpg");
-
   background-attachment: fixed;
-
   box-shadow: 0 0 16px var(--c-gray);
 }
 

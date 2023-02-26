@@ -1,17 +1,18 @@
 .footer {
-  background-color: var(--c-black);
-  color: var(--c-white--ls);
-
   display: grid;
   place-items: center;
   text-align: center;
-
+  
   padding-block: 48px;
+
+  background-color: var(--c-black);
+  color: var(--c-white--ls);
 }
 
 .footer__title {
-  font-weight: 700;
   margin-bottom: 16px;
+  
+  font-weight: 700;
 }
 
 .description__link {
@@ -31,6 +32,6 @@
 }
 
 .description__link:hover {
-  text-decoration: none;
   color: var(--c-main);
+  text-decoration: none;
 }

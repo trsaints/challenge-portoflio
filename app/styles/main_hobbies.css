@@ -1,7 +1,7 @@
 .list__hobby {
   background-position: center -200px;
-  background-size: contain;
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .list__hobby:first-child {
