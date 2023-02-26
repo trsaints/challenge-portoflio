@@ -64,6 +64,8 @@ export default class Card {
     demoAnchor.setAttribute("href", demo);
     repoAnchor.setAttribute("target", "_blank");
     demoAnchor.setAttribute("target", "_blank");
+    repoAnchor.setAttribute("rel", "noopener");
+    demoAnchor.setAttribute("rel", "noopener");
 
     options.appendChild(repoAnchor);
     options.appendChild(demoAnchor);

@@ -7,12 +7,9 @@
 }
 
 .list__skill:hover,
-.list__skill:active {
+.list__skill:active,
+.list__skill:focus {
   background-size: 4rem;
-}
-
-.list__skill:not(:hover) {
-  background-size: 0;
 }
 
 .list__skill:first-child {

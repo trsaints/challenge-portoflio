@@ -23,16 +23,20 @@
 }
 
 .projects__button:hover,
-.projects__button:active,
 .projects__button:focus {
   background-color: var(--c-main);
   box-shadow: 4px 4px 2px var(--c-gray);
   color: var(--c-black);
+  transform: scale(1.03);
 }
 
-.projects__button:focus {
+.projects__button:focus-visible {
   outline: 2px solid var(--c-black);
-  transform: scale(1.03);
+}
+
+.projects__button:active {
+  box-shadow: 0 0 0 transparent;
+  transform: scale(1);
 }
 
 .projects__list {
@@ -144,13 +148,18 @@
 }
 
 .options__link:hover,
-.options__link:active,
 .options__link:focus {
+  box-shadow: 4px 4px 2px var(--c-gray);
   transform: scale(1.03);
 }
 
-.options__link:focus {
+.options__link:focus-visible {
   outline: 2px solid var(--c-black);
+}
+
+.options__link:active {
+  transform: scale(1);
+  box-shadow: none;
 }
 
 .options__link:first-child {

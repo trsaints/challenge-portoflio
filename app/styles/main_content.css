@@ -72,11 +72,16 @@
   }
 }
 
+.list__skill:focus,
+.list__hobby:focus,
 .list__skill:hover,
 .list__hobby:hover {
   border-bottom-color: var(--c-main);
 }
 
+.list__skill:focus,
+.list__hobby:focus,
+.list__graduation:focus .graduation__banner,
 .list__skill:hover,
 .list__hobby:hover,
 .graduation__banner:hover {

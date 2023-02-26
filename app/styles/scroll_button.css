@@ -37,10 +37,14 @@
   font-size: 1.7rem;
 }
 
-.scroller:active,
-.scroller:hover {
+.scroller:hover,
+.scroller:focus {
   color: var(--c-main);
-  transform: scale(1.025);
+  transform: scale(1.05);
+}
+
+.scroller:active {
+  transform: scale(1);
 }
 
 @media screen and (min-width: 768px) {

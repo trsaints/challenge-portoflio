@@ -100,9 +100,18 @@
   box-shadow: 0.25rem 0.25rem 0.125rem var(--c-gray);
 }
 
+.fieldset__button:hover,
 .fieldset__button:focus {
-  outline: 0.125rem solid var(--c-black);
   transform: scale(1.03);
+}
+
+.fieldset__button:focus-visible {
+  outline: 0.125rem solid var(--c-black);
+}
+
+.fieldset__button:active {
+  transform: scale(1);
+  box-shadow: 0 0 0 transparent;
 }
 
 @media screen and (min-width: 768px) {
